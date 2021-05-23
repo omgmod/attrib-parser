@@ -1,8 +1,9 @@
-import json
 import time
 from collections import defaultdict
 from pathlib import Path
+from typing import AnyStr, DefaultDict, Tuple, Dict, Callable, Union
 
+from FileUtils import FileUtils
 from slpp import slpp as lua
 
 start = time.process_time()
@@ -19,24 +20,9 @@ ATTRIB_FACTIONS = {'allies', 'allies_cw', 'axis', 'axis_pe'}
 TOP_DIRS = {'weapon', 'ebps', 'sbps', 'abilities', 'upgrade'}
 
 
-def read_file(filename):
-    file = open(filename, mode='r')
-    file_contents = file.read()
-    file.close()
-
-    return file_contents
-
-
-def read_file_lines(filename):
-    file = open(filename, mode='r')
-    file_contents = file.readlines()
-    file.close()
-
-    return file_contents
-
-
-def with_perf_timing(fn):
+def with_perf_timing(fn: Callable) -> Callable:
     def wrapper(*args):
+        # Expects that arg[1] will be the identifying name of this action
         if len(args) == 2:
             name = f'[{args[1]}]'
         else:
@@ -51,14 +37,14 @@ def with_perf_timing(fn):
 
 
 @with_perf_timing
-def parse_unit_and_upgrade_const_files():
+def parse_unit_and_upgrade_const_files() -> Tuple[Dict, Dict]:
     # Parse units
-    unit_file = read_file('./consts/omg_unit_const.scar')
+    unit_file = FileUtils.read_file('./consts/omg_unit_const.scar')
     unit_file = unit_file.replace("OMGSBPS =", "").replace("BP_GetSquadBlueprint(", "").replace(")", "")
     unit_consts = lua.decode(unit_file)
 
     # Parse ability upgrades
-    upgrade_file = read_file('./consts/omg_ability_upgrade_const.scar')
+    upgrade_file = FileUtils.read_file('./consts/omg_ability_upgrade_const.scar')
     upgrade_file = upgrade_file.split("OMGUPG =")[1].replace("OMGUPG =", "").replace("BP_GetUpgradeBlueprint(",
                                                                                      "").replace(")", "")
     upgrade_consts = lua.decode(upgrade_file)
@@ -66,9 +52,9 @@ def parse_unit_and_upgrade_const_files():
     return unit_consts, upgrade_consts
 
 
-def parse_lua_to_dict(filepath: Path):
+def parse_lua_to_dict(filepath: Path) -> DefaultDict:
     # The Lua file contains a table named GameData with stats. Translate those into a dict
-    file_lines = read_file_lines(filepath.absolute().as_posix())
+    file_lines = FileUtils.read_file_lines(filepath.absolute().as_posix())
     result = defaultdict(dict)
 
     for line in file_lines:
@@ -110,7 +96,7 @@ def parse_lua_to_dict(filepath: Path):
     return result
 
 
-def iterate_through_subdirectories(directory):
+def iterate_through_subdirectories(directory: Path) -> DefaultDict:
     result = defaultdict(dict)
     for file_path in directory.rglob('*.lua'):
         # Tuple in the form of ('attrib', 'weapon', 'allies_cw', 'barrage_weapon', 'commonwealth_offmapartillery_creeping_barrage.lua')
@@ -132,15 +118,14 @@ def iterate_through_subdirectories(directory):
 
 
 @with_perf_timing
-def parse_attrib_dir(attrib_dir, directory):
+def parse_attrib_dir(attrib_dir: Path, directory: AnyStr) -> DefaultDict:
     return iterate_through_subdirectories(attrib_dir)
 
 
 @with_perf_timing
-def save_to_json(attrib_dict, json_file_name):
+def save_to_json(attrib_dict: Union[Dict, DefaultDict], json_file_name: AnyStr) -> None:
     attrib = dict(attrib_dict)
-    with open(json_file_name, mode='w') as json_file:
-        json.dump(attrib, json_file)
+    FileUtils.save_dict_to_json(json_file_name, attrib)
 
 
 # Get unit and upgrade consts by faction
