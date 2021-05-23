@@ -1,0 +1,7 @@
+GameData = Inherit([[]])
+GameData["hardpoint_01"] = Reference([[tables\hardpoint_details.lua]])
+GameData["hardpoint_02"] = Reference([[tables\hardpoint_details.lua]])
+GameData["hardpoint_03"] = Reference([[tables\hardpoint_details.lua]])
+GameData["hardpoint_04"] = Reference([[tables\hardpoint_details.lua]])
+GameData["hardpoint_05"] = Reference([[tables\hardpoint_details.lua]])
+GameData["hardpoint_06"] = Reference([[tables\hardpoint_details.lua]])

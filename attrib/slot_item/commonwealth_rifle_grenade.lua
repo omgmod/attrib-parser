@@ -1,0 +1,15 @@
+GameData = Inherit([[]])
+GameData["slot_item_bag"] = Reference([[bags\slot_item_bag.lua]])
+GameData["slot_item_bag"]["can_drop"] = false
+GameData["slot_item_bag"]["has_speech_code"] = true 
+GameData["slot_item_bag"]["is_entity_user"] = true 
+GameData["slot_item_bag"]["slot_size"] = 1
+GameData["slot_item_bag"]["speech_code_2"]["code_1"] = [[AG]]
+GameData["slot_item_bag"]["speech_code_2"]["code_2"] = [[gd]]
+GameData["slot_item_bag"]["speech_code_3"]["code_1"] = [[ARG]]
+GameData["slot_item_bag"]["speech_code_3"]["code_2"] = [[gnd]]
+GameData["slot_item_bag"]["ui_info"]["icon_name"] = [[weapons\weapon_rifle_grenadier]]
+GameData["slot_item_bag"]["ui_unit_ratings"]["vs_infantry"] = 1
+GameData["slot_item_bag"]["weapon"]["origin"]["y"] = 1.5
+GameData["slot_item_bag"]["weapon"]["type"] = [[squad]]
+GameData["slot_item_bag"]["weapon"]["weapon"] = [[weapon\allies_cw\small_arms\single_fire\rifle\cw_lee_enfield_rifle_grenade.lua]]

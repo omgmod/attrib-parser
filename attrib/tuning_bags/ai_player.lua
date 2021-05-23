@@ -1,0 +1,13 @@
+GameData = Inherit([[]])
+GameData["0x0CECEC8E"] = 1
+GameData["0x3B8D2C5D"] = 1
+GameData["0x504D0C14"] = 1
+GameData["0x5BD8E78D"] = 1
+GameData["0x708AD627"] = 1
+GameData["0x94B102DD"] = 1.5
+GameData["0x99B9C6A8"] = 1
+GameData["0xBD052BB3"] = 1.5
+GameData["res_manpower_bonus_easy"] = 1
+GameData["res_manpower_bonus_hard"] = 1.100000024
+GameData["res_manpower_bonus_hardest"] = 1.399999976
+GameData["res_manpower_bonus_standard"] = 1

@@ -1,0 +1,17 @@
+GameData = Inherit([[]])
+GameData["ally_a"] = 255
+GameData["ally_b"] = 0
+GameData["ally_g"] = 255
+GameData["ally_r"] = 255
+GameData["enemy_a"] = 255
+GameData["enemy_b"] = 0
+GameData["enemy_g"] = 0
+GameData["enemy_r"] = 255
+GameData["local_a"] = 255
+GameData["local_b"] = 255
+GameData["local_g"] = 0
+GameData["local_r"] = 0
+GameData["neutral_a"] = 255
+GameData["neutral_b"] = 255
+GameData["neutral_g"] = 255
+GameData["neutral_r"] = 255

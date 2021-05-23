@@ -1,0 +1,10 @@
+GameData = Inherit([[]])
+GameData["heavy_weapon_setup_delay"] = 0
+GameData["reaction_delay_seconds"] = 8
+GameData["reveal_self_attacker_time"] = 0
+GameData["reveal_self_attacker_time_use"] = false
+GameData["squad_ai_file"] = [[default-plan]]
+GameData["squad_ai_pinned_file"] = [[]]
+GameData["squad_ai_reaction_file"] = [[]]
+GameData["squad_ai_retaliation_file"] = [[]]
+GameData["suppression"] = Reference([[tables\squad_suppression_table.lua]])

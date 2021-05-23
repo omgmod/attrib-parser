@@ -1,0 +1,13 @@
+GameData = Inherit([[]])
+GameData["duration"] = 0
+GameData["height"] = 0
+GameData["icon"] = [[]]
+GameData["offset_x"] = 0
+GameData["offset_y"] = 0
+GameData["text"] = [[]]
+GameData["textcolour_blue"] = 0
+GameData["textcolour_green"] = 0
+GameData["textcolour_red"] = 0
+GameData["textfont"] = [[]]
+GameData["type"] = [[]]
+GameData["width"] = 0

@@ -1,0 +1,9 @@
+GameData = Inherit([[]])
+GameData["camouflage_stance_bag"] = Reference([[bags\camouflage_stance_bag.lua]])
+GameData["camouflage_stance_bag"]["combat_stance_value"] = [[tp_cease_fire]]
+GameData["camouflage_stance_bag"]["has_ui_button"] = true 
+GameData["camouflage_stance_bag"]["ui_info"]["help_text"] = "$106650"
+GameData["camouflage_stance_bag"]["ui_info"]["hotkey_name"] = [[stance_hold]]
+GameData["camouflage_stance_bag"]["ui_info"]["icon_name"] = [[abilities\ability_axis_at_hold_fire_on]]
+GameData["camouflage_stance_bag"]["ui_info"]["screen_name"] = "$106651"
+GameData["camouflage_stance_bag"]["ui_usage_txt"] = "$106652"

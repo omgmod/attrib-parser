@@ -1,0 +1,5 @@
+GameData = Inherit([[]])
+GameData["end_self_actions"] = Reference([[tables\ability_action_table.lua]])
+GameData["end_target_actions"] = Reference([[tables\ability_action_table.lua]])
+GameData["start_self_actions"] = Reference([[tables\ability_action_table.lua]])
+GameData["start_target_actions"] = Reference([[tables\ability_action_table.lua]])

@@ -1,0 +1,13 @@
+GameData = Inherit([[]])
+GameData["tp_defcover"] = 0
+GameData["tp_defcover_narrow"] = 0
+GameData["tp_garrison_cover"] = 0
+GameData["tp_garrison_halftrack"] = 0
+GameData["tp_heavy"] = 0
+GameData["tp_light"] = 0
+GameData["tp_negative"] = 0
+GameData["tp_open"] = 0
+GameData["tp_smoke"] = 0
+GameData["tp_water"] = 0
+GameData["tp_z_bunker"] = 0
+GameData["tp_z_emplacement"] = 0

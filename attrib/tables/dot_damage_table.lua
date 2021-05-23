@@ -1,0 +1,6 @@
+GameData = Inherit([[]])
+GameData["distance_00"] = Reference([[tables\dot_damage_entry.lua]])
+GameData["distance_01"] = Reference([[tables\dot_damage_entry.lua]])
+GameData["distance_02"] = Reference([[tables\dot_damage_entry.lua]])
+GameData["distance_03"] = Reference([[tables\dot_damage_entry.lua]])
+GameData["distance_04"] = Reference([[tables\dot_damage_entry.lua]])

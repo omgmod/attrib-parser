@@ -1,0 +1,15 @@
+GameData = Inherit([[]])
+GameData["required_1"] = Reference([[requirements\required_none.lua]])
+GameData["required_1"]["ui_name"] = "$0"
+GameData["required_2"] = Reference([[requirements\required_none.lua]])
+GameData["required_2"]["ui_name"] = "$0"
+GameData["required_3"] = Reference([[requirements\required_none.lua]])
+GameData["required_3"]["ui_name"] = "$0"
+GameData["required_4"] = Reference([[requirements\required_none.lua]])
+GameData["required_4"]["ui_name"] = "$0"
+GameData["required_5"] = Reference([[requirements\required_none.lua]])
+GameData["required_5"]["ui_name"] = "$0"
+GameData["required_6"] = Reference([[requirements\required_none.lua]])
+GameData["required_6"]["ui_name"] = "$0"
+GameData["required_7"] = Reference([[requirements\required_none.lua]])
+GameData["required_7"]["ui_name"] = "$0"

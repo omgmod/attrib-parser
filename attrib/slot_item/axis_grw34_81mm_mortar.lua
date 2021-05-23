@@ -1,0 +1,9 @@
+GameData = Inherit([[]])
+GameData["slot_item_bag"] = Reference([[bags\slot_item_bag.lua]])
+GameData["slot_item_bag"]["package_icon"] = [[weapons\weapon_decorator_anti_infantry]]
+GameData["slot_item_bag"]["slot_size"] = 1
+GameData["slot_item_bag"]["ui_info"]["hotkey_name"] = [[axis_mortar_team]]
+GameData["slot_item_bag"]["ui_info"]["screen_name"] = "$98050"
+GameData["slot_item_bag"]["weapon"]["origin"]["y"] = 1.5
+GameData["slot_item_bag"]["weapon"]["type"] = [[squad]]
+GameData["slot_item_bag"]["weapon"]["weapon"] = [[weapon\axis\ballistic_weapon\mortar\grw34_81mm_mortar.lua]]

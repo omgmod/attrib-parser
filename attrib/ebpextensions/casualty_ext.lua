@@ -1,0 +1,14 @@
+GameData = Inherit([[]])
+GameData["0x066DA4F4"] = Reference([[tables\action_table.lua]])
+GameData["0x20DDBF17"] = false
+GameData["0x7CC8A1A3"] = Reference([[tables\action_table.lua]])
+GameData["0x923669E2"] = Reference([[tables\action_table.lua]])
+GameData["casualty_modifiers"] = Reference([[tables\modifier_table.lua]])
+GameData["casualty_modifiers"]["modifier_02"] = Reference([[modifiers\sight_radius_modifier.lua]])
+GameData["casualty_modifiers"]["modifier_02"]["value"] = 0.05000000075
+GameData["maximum_death_time"] = 0
+GameData["minimum_death_time"] = 0
+GameData["splat_filename"] = [[]]
+GameData["splat_radius"] = 0
+GameData["splat_seconds_after_death_or_rescue"] = 0
+GameData["wounded_ui_time_limit"] = 0

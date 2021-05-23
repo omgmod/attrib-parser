@@ -1,0 +1,16 @@
+GameData = Inherit([[]])
+GameData["angle_scatter"] = 0
+GameData["burst_pattern_enable"] = false
+GameData["delay_bracket_change_chance"] = 0
+GameData["distance_bracket_count_air"] = 0
+GameData["distance_bracket_count_ground"] = 1
+GameData["distance_scatter_max"] = 0
+GameData["distance_scatter_obj_hit_min"] = 0
+GameData["distance_scatter_offset"] = 0
+GameData["distance_scatter_ratio"] = 0
+GameData["fow_angle_multiplier"] = 0
+GameData["fow_distance_multiplier"] = 0
+GameData["max_tilt_angle"] = 0
+GameData["min_tilt_angle"] = 0
+GameData["tilt_max_distance"] = 0
+GameData["tilt_scatter_chance"] = 0

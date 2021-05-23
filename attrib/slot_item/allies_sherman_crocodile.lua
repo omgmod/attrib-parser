@@ -1,0 +1,13 @@
+GameData = Inherit([[]])
+GameData["slot_item_bag"] = Reference([[bags\slot_item_bag.lua]])
+GameData["slot_item_bag"]["can_drop"] = false
+GameData["slot_item_bag"]["has_speech_code"] = true 
+GameData["slot_item_bag"]["slot_size"] = 1
+GameData["slot_item_bag"]["speech_code_2"]["code_1"] = [[Cr]]
+GameData["slot_item_bag"]["speech_code_3"]["code_1"] = [[Cro]]
+GameData["slot_item_bag"]["ui_info"]["hotkey_name"] = [[ally_sherman_crocodile]]
+GameData["slot_item_bag"]["weapon"]["origin"]["x"] = -0.4754999876
+GameData["slot_item_bag"]["weapon"]["origin"]["y"] = 2.583600044
+GameData["slot_item_bag"]["weapon"]["origin"]["z"] = 1.234899998
+GameData["slot_item_bag"]["weapon"]["type"] = [[squad]]
+GameData["slot_item_bag"]["weapon"]["weapon"] = [[weapon\allies\flame_throwers\sherman_crocodile_flame_projector.lua]]

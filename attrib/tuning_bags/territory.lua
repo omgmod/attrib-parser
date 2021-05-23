@@ -1,0 +1,9 @@
+GameData = Inherit([[]])
+GameData["border_line_color_a"] = 128
+GameData["border_line_color_b"] = 96
+GameData["border_line_color_g"] = 96
+GameData["border_line_color_r"] = 96
+GameData["nature_influence"] = 50
+GameData["show_enemy_territory_minimap"] = false
+GameData["show_enemy_territory_multiplayer"] = false
+GameData["show_enemy_territory_singleplayer"] = false

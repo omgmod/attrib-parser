@@ -1,0 +1,17 @@
+GameData = Inherit([[]])
+GameData["turn_plan_bag"] = Reference([[bags\turn_plan_bag.lua]])
+GameData["turn_plan_bag"]["turn_plan_01"]["max_additional_delay"] = 0.200000003
+GameData["turn_plan_bag"]["turn_plan_02"]["max_additional_delay"] = 0.200000003
+GameData["turn_plan_bag"]["turn_plan_02"]["radius_multiplier"] = 0.5
+GameData["turn_plan_bag"]["turn_plan_03"]["max_additional_delay"] = 0.5
+GameData["turn_plan_bag"]["turn_plan_03"]["radius_multiplier"] = 5
+GameData["turn_plan_bag"]["turn_plan_03"]["turn_type"] = [[curve_turn]]
+GameData["turn_plan_bag"]["turn_plan_04"]["max_additional_delay"] = 0.3000000119
+GameData["turn_plan_bag"]["turn_plan_04"]["radius_multiplier"] = 5
+GameData["turn_plan_bag"]["turn_plan_04"]["turn_type"] = [[curve_turn]]
+GameData["turn_plan_bag"]["turn_plan_05"]["max_additional_delay"] = 0.3000000119
+GameData["turn_plan_bag"]["turn_plan_05"]["turn_type"] = [[curve_turn]]
+GameData["turn_plan_bag"]["turn_plan_06"]["max_additional_delay"] = 0.3000000119
+GameData["turn_plan_bag"]["turn_plan_06"]["radius_multiplier"] = 0.5
+GameData["turn_plan_bag"]["turn_plan_07"]["max_additional_delay"] = 0.3799999952
+GameData["turn_plan_bag"]["turn_plan_08"]["max_additional_delay"] = 0.200000003

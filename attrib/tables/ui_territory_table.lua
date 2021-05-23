@@ -1,0 +1,14 @@
+GameData = Inherit([[]])
+GameData["animate_u"] = 0
+GameData["animate_v"] = 0
+GameData["diffuse_a"] = 0
+GameData["diffuse_b"] = 0
+GameData["diffuse_g"] = 0
+GameData["diffuse_r"] = 0
+GameData["sectorcolor_a"] = 96
+GameData["sectorcolor_b"] = 0
+GameData["sectorcolor_g"] = 0
+GameData["sectorcolor_r"] = 255
+GameData["texture"] = [[]]
+GameData["thickness"] = 1
+GameData["uv_scale"] = 1

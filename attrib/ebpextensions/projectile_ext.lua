@@ -1,0 +1,15 @@
+GameData = Inherit([[]])
+GameData["acceleration"] = 0
+GameData["artillery"] = Reference([[tables\artillery_table.lua]])
+GameData["building_hit_fx_delay"] = 0
+GameData["collision_building_wall_panel_ignore"] = false
+GameData["collision_type"] = Reference([[type_projectile_collision\tp_homing.lua]])
+GameData["deathtimer"] = 0
+GameData["delay_detonate_time"] = 0
+GameData["delay_detonate_ui_enabled"] = false
+GameData["do_explosion"] = true 
+GameData["launcher_marker"] = [[]]
+GameData["lifetime_multiplier"] = 1.200000048
+GameData["rotation_speed"] = 0
+GameData["spawn_collision_fx"] = false
+GameData["speed"] = 0

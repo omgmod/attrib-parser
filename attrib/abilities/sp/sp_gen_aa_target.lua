@@ -1,0 +1,16 @@
+GameData = Inherit([[]])
+GameData["ability_bag"] = Reference([[bags\ability_bag.lua]])
+GameData["ability_bag"]["action_list"]["start_target_actions"]["action_01"] = Reference([[action\ability_action\air_recon_action.lua]])
+GameData["ability_bag"]["action_list"]["start_target_actions"]["action_01"]["aircraft_name"] = [[ebps\races\allies\vehicles\sp_aatarget.lua]]
+GameData["ability_bag"]["action_list"]["start_target_actions"]["action_01"]["distance_between_reveals"] = 1
+GameData["ability_bag"]["action_list"]["start_target_actions"]["action_01"]["source_offset_x"] = 500
+GameData["ability_bag"]["action_list"]["start_target_actions"]["action_01"]["source_offset_z"] = 500
+GameData["ability_bag"]["action_list"]["start_target_actions"]["action_01"]["time_revealed_for"] = 1
+GameData["ability_bag"]["activation"] = [[targeted]]
+GameData["ability_bag"]["break_formation_distance"] = 5
+GameData["ability_bag"]["can_target_in_fow"] = true 
+GameData["ability_bag"]["caster_close_in_distance"] = 2
+GameData["ability_bag"]["range_ignore"] = true 
+GameData["ability_bag"]["squad_caster"] = [[one_entity]]
+GameData["ability_bag"]["ui_cursor"]["cursor_bad"] = [[modal_ability_cancel]]
+GameData["ability_bag"]["ui_cursor"]["cursor_good"] = [[modal_ability]]

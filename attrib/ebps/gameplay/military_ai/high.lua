@@ -1,0 +1,17 @@
+GameData = Inherit([[]])
+GameData["entity_blueprint_ext"] = Reference([[ebpextensions\entity_blueprint_ext.lua]])
+GameData["entity_blueprint_ext"]["animator"] = [[gameplay\military_ai\high]]
+GameData["entity_blueprint_ext"]["simbox"] = Reference([[]])
+GameData["entity_blueprint_ext"]["simbox"]["offset"] = Reference([[]])
+GameData["entity_blueprint_ext"]["simbox"]["offset"]["x"] = -0.04674000293
+GameData["entity_blueprint_ext"]["simbox"]["offset"]["y"] = 2.82359004
+GameData["entity_blueprint_ext"]["simbox"]["offset"]["z"] = -0.08680000156
+GameData["entity_blueprint_ext"]["simbox"]["scale"] = Reference([[]])
+GameData["entity_blueprint_ext"]["simbox"]["scale"]["x"] = 1.004709959
+GameData["entity_blueprint_ext"]["simbox"]["scale"]["y"] = 2.820389986
+GameData["entity_blueprint_ext"]["simbox"]["scale"]["z"] = 0.3367400169
+GameData["entity_blueprint_ext"]["suaTimeStamp"] = Reference([[]])
+GameData["entity_blueprint_ext"]["suaTimeStamp"]["filename"] = [[Data:Art\Models\gameplay\military_ai\high.sua]]
+GameData["entity_blueprint_ext"]["suaTimeStamp"]["fileTime"] = "$1154286313"
+GameData["sim_entity_ext"] = Reference([[ebpextensions\sim_entity_ext.lua]])
+GameData["sim_entity_ext"]["rotate_snap"] = 360

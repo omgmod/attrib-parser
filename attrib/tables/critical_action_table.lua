@@ -1,0 +1,7 @@
+GameData = Inherit([[]])
+GameData["action_01"] = Reference([[action\critical_action\no_action.lua]])
+GameData["action_02"] = Reference([[action\critical_action\no_action.lua]])
+GameData["action_03"] = Reference([[action\critical_action\no_action.lua]])
+GameData["action_04"] = Reference([[action\critical_action\no_action.lua]])
+GameData["action_05"] = Reference([[action\critical_action\no_action.lua]])
+GameData["action_06"] = Reference([[action\critical_action\no_action.lua]])

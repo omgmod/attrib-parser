@@ -1,0 +1,321 @@
+
+
+-- OMG Abilites
+OMGABILITY =
+{
+	ALLY =
+	{
+		SPAWN_ARTY = BP_GetAbilityBlueprint("abilities/ally_spawn_arty_barrage.lua"),
+		PARA_SMOKE= BP_GetAbilityBlueprint("abilities/omg_para_smoke.lua"),
+	},
+	AXIS =
+	{
+		SPAWN_ARTY = BP_GetAbilityBlueprint("abilities/axis_spawn_arty_barrage.lua"),
+		
+	},
+	CMW =
+	{
+	},
+	PE =
+	{
+	},
+	
+	SYSTEMS =
+	{
+		MAKE_NEUTRAL = BP_GetAbilityBlueprint([[abilities\omg\systems\make_neutral.lua]]),
+	}
+}
+
+-- OMG Upgrades
+OMGUPG =
+{
+	
+	RETREAT = BP_GetUpgradeBlueprint("upgrade/omg/unit_despawn_on.lua"),
+	
+	ALLY =
+	{
+		
+		-- doctrine choice markers
+		AIRBORNEDOC= BP_GetUpgradeBlueprint("upgrade/omg/allies/docmarkers/airbornedoc.lua"),
+		ARMOURDOC= BP_GetUpgradeBlueprint("upgrade/omg/allies/docmarkers/armourdoc.lua"),
+		INFANTRYDOC= BP_GetUpgradeBlueprint("upgrade/omg/allies/docmarkers/infantrydoc.lua"),
+		
+		-- infantry
+		FOUR_THOMPSONS= BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_four_thompsons.lua"),
+		TWO_THOMPSONS= BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_two_thompsons.lua"),
+		TWO_BAZOOKAS= BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_two_bazookas.lua"),
+		SINGLE_BAZOOKA= BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_single_bazooka.lua"),
+		SINGLE_THOMPSON= BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_single_thompson.lua"),
+		RANGER_GRENADE= BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_nades.lua"),
+		FIREUP= BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_fireup.lua"),
+		BAR= BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_squad_item_bar.lua"),
+		SINGLE_BAR= BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_squad_single_bar.lua"),
+		SUPPRESSION    = BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_squad_item_barsurpress.lua"),
+		STICKY= BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_stickies.lua"),
+		--[[Out of Order
+		ALLIED_OFFICER
+		EXTRA_RIFLEMEN
+		SNIPER_RIFLE
+		RADIO= BP_GetUpgradeBlueprint(".lua"),
+		LB= BP_GetUpgradeBlueprint(".lua"),
+		LISTENING_DEVICE = BP_GetUpgradeBlueprint(".lua"),
+		End Out of Order]]
+		SMOKE_GRENADE= BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_smoke.lua"),
+		GRENADE= BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_nades.lua"),
+		RECOILLES_RIFLE= BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_paratrooper_anti_tank_package.lua"),
+		AIRBORNE_GRENADE= BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_nades.lua"),
+		SATCHEL= BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_satchels.lua"),
+		FLAME_THROWER= BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_squad_item_flamethrower.lua"),
+		MINE_DETECTOR= BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_squad_item_minesweeper.lua"),
+		DEMOLITIONS= BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_demo.lua"),
+		MG_NEST= BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_mgnest.lua"),
+		MEDIC_STATION= BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_medicstation.lua"),
+		TRIAGE_CENTER= BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_triage.lua"),
+		MINES= BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_mines.lua"),
+		MG_AP_ROUNDS= BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_apmg.lua"),
+		SPOTTER_ARTY= BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_spotter_arty.lua"),
+		ENGY_LMG= BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_combat_engineer_lmg.lua"),
+		MECH_SNIPE= BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_squad_mech_sharp_shooter.lua"),
+		MECH_CQC= BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_squad_mech_close_combat.lua"),
+		MECH_AT= BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_squad_mech_anti_tank.lua"),
+		
+		-- Vehicle
+		AT_AP_ROUNDS= BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_apat.lua"),
+		AIRDROP_AT_AP_ROUNDS= BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_apat.lua"),
+		M8_SIDE_SKIRTS= BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_m8_armour_upgrade.lua"),
+		M8_50_CAL= BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_50cal_m8_greyhound.lua"),
+		M8_MINES= BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_m8_mines.lua"),
+		SHERMAN_UPGUN= BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_sherman_76mm_upgunned.lua"),
+		PERSHING_UPGUN= BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_pershing_hvap_upgunned.lua"),
+		SHERMAN_MG= BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_50cal_sherman_turret_mount.lua"),
+		TANK_SMOKE= BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_tank_smoke.lua"),
+		BULLDOZER= BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_sherman_bulldozer.lua"),
+		--TANK_AP= BP_GetUpgradeBlueprint(".lua"),
+		T17WHITE= BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_t17_white.lua"),
+		T17SAND= BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_t17_armour_upgrade.lua"),
+		M18FIFTY= BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_50cal_hellcat_turret_mount.lua"),
+		SHERMAN_FLAIL= BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_sherman_crab.lua"),
+		VEHICLE_SMOKE= BP_GetUpgradeBlueprint("upgrade/omg/allies/items/tank_smoke.lua"),
+		SHERMAN_ODDBALL= BP_GetUpgradeBlueprint("upgrade/omg/allies/items/t1_allies_sherman_76mm_oddball.lua"),
+		--MOCK_TANK= BP_GetUpgradeBlueprint(".lua"),
+		
+		-- Doctrine Upgrades
+		QUADAP = BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_quad_apmg.lua"),
+		MORTAR_FLARE = BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_mortar_flare.lua"),
+		GREASE_GUNS = BP_GetUpgradeBlueprint("upgrade/omg/allies/items/Close_spray.lua"),
+		SNARE_TRAPS = BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_mines_snare.lua"),
+		M1_GARAND = BP_GetUpgradeBlueprint("upgrade/omg/allies/items/m1_garand.lua"),
+		ARM_CAP = BP_GetUpgradeBlueprint("upgrade/omg/allies/items/t2_vehicle_cap.lua"),
+		REPAIR_MANUAL = BP_GetUpgradeBlueprint("upgrade/omg/allies/items/t2_repair_manuals.lua"),
+		FOUR_BAR = BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_squad_four_bar.lua"),
+		FOUR_M1_GARAND = BP_GetUpgradeBlueprint("upgrade/omg/allies/items/m1_garand.lua"),
+		M2_CARBINES = BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_m2_carbines.lua"),
+		M1A1_CARBINES = BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_m1a1_carbines.lua"),
+		M1919_LMG = BP_GetUpgradeBlueprint("upgrade/omg/allies/items/allies_squad_m1919a6_lmg.lua"),
+
+		-- Offmaps
+		AB_RECON_RUN = BP_GetUpgradeBlueprint("upgrade/omg/allies/items/t1_recon_run.lua"),
+		HOWITZER_105 = BP_GetUpgradeBlueprint("upgrade/omg/allies/items/t2_howitzer_shoot.lua"),
+		MEDICAL_SUPP = BP_GetUpgradeBlueprint("upgrade/omg/allies/items/t2_airdrop_triage.lua"),
+		STRAFING_RUN = BP_GetUpgradeBlueprint("upgrade/omg/allies/items/t2_straffing_run.lua"),
+		SMOKE_BARRAGE = BP_GetUpgradeBlueprint("upgrade/omg/allies/items/t2_smoke_barrage_offmap.lua"),
+		BOMBING_RUN = BP_GetUpgradeBlueprint("upgrade/omg/allies/items/t2_bombing_run.lua"),
+		SMOKE_RUN = BP_GetUpgradeBlueprint("upgrade/omg/allies/items/t2_smoke_run.lua"),
+	},
+	
+	AXIS =
+	{
+		
+		-- doctrine choice markers
+		BLITZDOC= BP_GetUpgradeBlueprint("upgrade/omg/axis/docmarkers/blitzdoc.lua"),
+		DEFENSEDOC= BP_GetUpgradeBlueprint("upgrade/omg/axis/docmarkers/defensedoc.lua"),
+		TERRORDOC= BP_GetUpgradeBlueprint("upgrade/omg/axis/docmarkers/terrordoc.lua"),
+		
+		-- Infantry
+		MEDPACK = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/medpack.lua"),
+		KCH_MEDPACK = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/medpack.lua"),
+		FAUST = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/axis_pfaust.lua"),
+		MP40 = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/axis_squad_item_volksgrenadier_smg.lua"),
+		SINGLE_MP40 = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/axis_squad_item_volks_mp40.lua"),
+		DOUBLE_MP40 = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/axis_squad_item_volks_mp40x2.lua"),
+		LMG = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/axis_squad_item_mg42.lua"),
+		SCHRECK = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/axis_squad_item_panzerschreck.lua"),
+		ST_SCHRECK = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/axis_squad_item_panzerschreck.lua"),
+		MP44 = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/axis_squad_item_mp44.lua"),
+		SECOND_MP44 = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/axis_squad_item_mp44x4.lua"),
+		GRENADE = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/axis_nades.lua"),
+		SMOKE_GRENADE = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/axis_smoke.lua"),
+		FLAMETHROWER = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/axis_flammenwerfer42_flamethrower.lua"),
+		MINEDETECTOR = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/axis_squad_item_minesweeper.lua"),
+		GOLIATH = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/axis_goliath.lua"),
+		TERROR_GOLIATH = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/axis_terror_goliath.lua"),
+		TERROR_REPAIR = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/axis_terror_repair.lua"),
+		BUNKER = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/axis_bunker.lua"),
+		MG42_BUNKER = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/axis_mg42bunker.lua"),
+		REPAIR_BUNKER = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/axis_repairbunker.lua"),
+		MEDIC_BUNKER = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/axis_medicbunker.lua"),
+		MINES = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/axis_mines.lua"),
+		ASSAULT_NADES = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/axis_assualt_nades.lua"),
+		BUNDLE_NADE = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/axis_bundled_nades.lua"),
+		MORTAR_BUNKER = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/axis_mortarbunker.lua"),
+		LISTENING_POST = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/axis_listening_post.lua"),
+		PANTHERTURM = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/axis_pantherbunker.lua"),
+		
+		-- Vehicles
+		P4_MG42 = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/axis_tank_item_mg42.lua"),
+		PANTHER_MG42= BP_GetUpgradeBlueprint("upgrade/omg/axis/items/axis_tank_item_mg42.lua"),
+		STUG_MG42 = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/axis_tank_item_mg42_stug.lua"),
+		STUH_MG42 = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/axis_tank_item_mg42_stug.lua"),
+		P4_SKIRTS = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/axis_tank_pziv_armour.lua"),
+		PANTHER_SKIRTS = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/axis_tank_panther_armour.lua"),
+		STUG_SKIRTS = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/axis_tank_stug_armour.lua"),
+		STUH_SKIRTS = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/axis_tank_stug_armour.lua"),
+		PUMA_UPGUN = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/axis_squad_item_50mm_puma.lua"),
+		GESHRAPID= BP_GetUpgradeBlueprint("upgrade/omg/axis/items/axis_geshutz_rapid.lua"),
+		TANK_SMOKE= BP_GetUpgradeBlueprint("upgrade/omg/axis/items/axis_tank_smoke.lua"),
+		
+		-- Offmaps
+		OBS_FLARE= BP_GetUpgradeBlueprint("upgrade/omg/axis/items/t1_artillery_observation_upgrade.lua"),
+		FOG_OF_WAR = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/t1_fog_war.lua"),
+		ROCKET_280 = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/t2_280mm_rocket_upgrade.lua"),
+		FIRESTORM = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/t2_firestorm.lua"),
+		BLITZKRIEG = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/t2_blitzkreig.lua"),
+		HEAVY_MORTAR = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/t2_heavy_mortar_bombardment.lua"),
+		INSPIRED_ASS = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/t2_inspired_assault.lua"),
+		REG_ARTILLERY = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/t2_registered_artillery.lua"),
+		FOR_THE_FATH = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/t2_for_the_fatherland.lua"),
+		
+		-- Doctrine Upgrades
+		SUPPORT_KARBINES = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/t1_karbines.lua"),
+		TERROR_KARBINES = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/t1_hunter_killers.lua"),
+		CAMOUFLAGE_SMOCKS = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/t2_camo_smocks.lua"),
+		TERROR_TOWER = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/t2_terror_tower.lua"),
+		
+	},
+	
+	CMW =
+	{
+		-- doctrine choice markers
+		ARTYDOC= BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/docmarkers/artydoc.lua"),
+		COMMANDODOC= BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/docmarkers/commandodoc.lua"),
+		ROYALENGIESDOC= BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/docmarkers/royalengiesdoc.lua"),
+		
+		-- Infantry
+		SERGEANT = BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/items/commonwealth_sergeant.lua"),
+		CASUALTY_STATION = BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/items/cmw_triage.lua"),
+		MARKSMAN = BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/items/commonwealth_marksman.lua"),
+		BREN_GUN = BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/items/commonwealth_sgt_bren_package.lua"),
+		BREN_WITH_BUTTON = BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/items/commonwealth_sgt_button_bren_package.lua"),
+		WITHDRAW = BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/items/commonwealth_retreat_to_captain.lua"),
+		MINES = BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/items/commonwealth_mines.lua"),
+		RIFLE_GRENADE = BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/items/commonwealth_sgt_rifle_grenade.lua"),
+		VICTOR = BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/items/victor_target.lua"),
+		BUTTON_BREN = BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/items/commonwealth_bren_button.lua"),
+		HEROIC_CHARGE = BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/items/commonwealth_heroic_charge.lua"),
+		SMOKE_GRENADES = BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/items/commonwealth_smoke.lua"),
+		EXPERT_ENGINEERS = BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/items/commonwealth_sgt_expert_engineer.lua"),
+		PIATS = BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/items/commonwealth_sgt_piat_package.lua"),
+		COMMANDO_GRENADE = BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/items/commonwealth_nades.lua"),
+		COMMANDO_DEMO_CHARGE = BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/items/commonwealth_demos.lua"),
+		DISPOSAL             = BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/items/commonwealth_sgt_demolitions.lua"),
+		BOYSAT             = BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/items/commonwealth_boys_at_rifle.lua"),
+		JOHNSON = BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/items/commonwealth_johnson.lua"),
+		SINGLE_BOYSAT             = BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/items/commonwealth_single_boys_at_rifle.lua"),
+		SINGLE_BREN_GUN = BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/items/commonwealth_single_bren_package.lua"),
+		SINGLE_PIAT = BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/items/commonwealth_single_piat_package.lua"),
+		BUILDING_PACK = BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/items/commonwealth_trench.lua"),
+		
+		-- Vehicles
+		AP_SEVENTEENPOUNDER= BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/items/commonwealth_atap.lua"),
+		FLANK_SPEED = BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/items/commonwealth_flank_speed.lua"),
+		TANK_COMMANDER = BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/items/commonwealth_tank_commander.lua"),
+		BREN_SELF_REPAIR= BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/items/commonwealth_bren_repair.lua"),
+		BREN_AP        = BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/items/commonwealth_brenap.lua"),
+		CANISTER = BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/items/commonwealth_canister.lua"),
+		--TANK_SHOCK = BP_GetUpgradeBlueprint(".lua"),
+		--CREEPING = BP_GetUpgradeBlueprint(".lua"),
+		TETRARCH_SMOKE = BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/items/commonwealth_tetrarch_smoke.lua"),
+		--OVERWATCH = BP_GetUpgradeBlueprint(".lua"),
+		--COUNTER = BP_GetUpgradeBlueprint(".lua"),
+		PLOW = BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/items/commonwealth_churchill_mine_plow.lua"),
+		TET_UPGUN = BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/items/commonwealth_tetrarch_littlejohn_adapter.lua"),
+		STAG50 = BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/items/commonwealth_50cal_staghound.lua"),
+		CRUSADER_AA  = BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/items/commonwealth_Crusader_AA.lua"),
+		CRUSADER_SKIRT = BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/items/commonwealth_Crusader_skirt.lua"),
+		CRUSADER_6PDR = BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/items/commonwealth_Crusader_6pdr.lua"),
+		GLOBAL_MARK = BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/items/commonwealth_global_marksman.lua"),
+		
+		-- doctrine
+		WHITE_CLOUD = BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/items/t1_commonwealth_white_cloud.lua"),
+		CREEP_BARR = BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/items/t2_creeping_barrage.lua"),
+		
+		-- doctrine offmaps
+		RADIO_DISRUPT = BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/items/t1_commonwealth_radio_disruption.lua"),
+		BARRAGE_25 = BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/items/t2_25_offmap.lua"),
+		FAKE_SMOKE = BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/items/t2_fake_arty.lua"),
+		RADIO_TRIANG = BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/items/t2_radio.lua"),
+		PROPER_ENCRY = BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/items/t2_proper_encryption.lua"),
+		GLIDER_TRIAGE = BP_GetUpgradeBlueprint("upgrade/omg/allies_cw/items/commando_hq_triage_glider.lua"),
+	},	
+	
+	PE =
+	{
+		-- doctrine choice markers
+		LUFTDOC = BP_GetUpgradeBlueprint("upgrade/omg/axis_pe/docmarkers/luftdoc.lua"),
+		SCORCHEDDOC = BP_GetUpgradeBlueprint("upgrade/omg/axis_pe/docmarkers/scorcheddoc.lua"),
+		TANKHUNTERDOC = BP_GetUpgradeBlueprint("upgrade/omg/axis_pe/docmarkers/tankhuntersdoc.lua"),
+		
+		-- Infantry
+		SMOKE_GRENADES = BP_GetUpgradeBlueprint("upgrade/omg/axis_pe/items/panzer_elite_smoke.lua"),
+		--MEDICSTATION = BP_GetUpgradeBlueprint("upgrade/omg/axis_pe/items/panzer_elite_medic.lua"),
+		AT_GRENADE = BP_GetUpgradeBlueprint("upgrade/omg/axis_pe/items/panzer_elite_atnades.lua"),
+		BOOBY_TRAP = BP_GetUpgradeBlueprint("upgrade/omg/axis_pe/items/panzer_elite_boobytrap.lua"),
+		ADVANCED_REPAIRS = BP_GetUpgradeBlueprint("upgrade/omg/axis_pe/items/panzer_elite_advanced_repair.lua"),
+		INCENDIARY_GRENADE = BP_GetUpgradeBlueprint("upgrade/omg/axis_pe/items/panzer_elite_incendiary.lua"),
+		ANTI_BUILDING_GRENADE = BP_GetUpgradeBlueprint("upgrade/omg/axis_pe/items/panzer_elite_antibuilding.lua"),
+		FAUST = BP_GetUpgradeBlueprint("upgrade/omg/axis_pe/items/panzer_elite_pfaust.lua"),
+		TELLER = BP_GetUpgradeBlueprint("upgrade/omg/axis_pe/items/panzer_elite_teller_mines.lua"),
+		FG42 = BP_GetUpgradeBlueprint("upgrade/omg/axis_pe/items/panzer_elite_falschirmjager_fg42_package.lua"),
+		G43 = BP_GetUpgradeBlueprint("upgrade/omg/axis_pe/items/panzer_elite_squad_g43_package.lua"),
+		SUPPRESSIVE_VOLLEY = BP_GetUpgradeBlueprint("upgrade/omg/axis_pe/items/panzer_elite_squad_g43_package_suppression.lua"),
+		VET_SGT = BP_GetUpgradeBlueprint("upgrade/omg/axis_pe/items/panzer_elite_vet_sgt.lua"),
+		SE_G43 = BP_GetUpgradeBlueprint("upgrade/omg/axis_pe/items/panzer_elite_squad_g43_package_SE.lua"),
+		SE_ASSAULT = BP_GetUpgradeBlueprint("upgrade/omg/axis_pe/items/panzer_elite_squad_assault_package.lua"),
+		LUFT_AIR_MINES = BP_GetUpgradeBlueprint("upgrade/omg/axis_pe/items/t1_panzer_elite_air_mine.lua"),
+		LUFT_LMG = BP_GetUpgradeBlueprint("upgrade/omg/axis_pe/items/panzer_elite_squad_LMG34_package.lua"),
+		
+		-- Vehicles
+		INCENDIARY_MORTAR_ROUNDS = BP_GetUpgradeBlueprint("upgrade/omg/axis_pe/items/panzer_elite_mortar_flames.lua"),
+		P4_SKIRTS = BP_GetUpgradeBlueprint("upgrade/omg/axis_pe/items/panzer_elite_panzer_iv_armour_skirts.lua"),
+		P4_MG42 = BP_GetUpgradeBlueprint("upgrade/omg/axis_pe/items/panzer_elite_pnze_iv_top_mg42.lua"),
+		STUP_MG42 = BP_GetUpgradeBlueprint("upgrade/omg/axis_pe/items/panzer_elite_stup_iv_top_mg42.lua"),
+		OVERDRIVE = BP_GetUpgradeBlueprint("upgrade/omg/axis_pe/items/panzer_elite_overdrive.lua"),
+		HETZER_SPOTTING = BP_GetUpgradeBlueprint("upgrade/omg/axis_pe/items/panzer_elite_hetzer_spotting_scope.lua"),
+		MUN_HT_MINE = BP_GetUpgradeBlueprint("upgrade/omg/axis_pe/items/panzer_elite_mines.lua"),
+		GOLIATH = BP_GetUpgradeBlueprint("upgrade/omg/axis_pe/items/panzer_elite_goliath.lua"),
+		PANTHER_SKIRTS = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/axis_tank_panther_armour.lua"),
+		PANTHER_MG42 = BP_GetUpgradeBlueprint("upgrade/omg/axis/items/axis_tank_item_mg42.lua"),
+		LOGISTICS = BP_GetUpgradeBlueprint("upgrade/omg/axis_pe/items/panzer_elite_logistics.lua"),
+		HOTCHUPGUN = BP_GetUpgradeBlueprint("upgrade/omg/axis_pe/items/panzer_elite_hotchkiss_h35_gun.lua"),
+		HOTCHSTUKA = BP_GetUpgradeBlueprint("upgrade/omg/axis_pe/items/panzer_elite_hotchkiss_stuka.lua"),
+		APCR_ATHT = BP_GetUpgradeBlueprint("upgrade/omg/axis_pe/items/panzer_elite_apcr_ATHT.lua"),
+		APCR_HETZER = BP_GetUpgradeBlueprint("upgrade/omg/axis_pe/items/panzer_elite_apcr_hetzer.lua"),
+		APCR_MARDER = BP_GetUpgradeBlueprint("upgrade/omg/axis_pe/items/panzer_elite_apcr_marder.lua"),
+		APCR_PANTHER = BP_GetUpgradeBlueprint("upgrade/omg/axis_pe/items/panzer_elite_apcr_panther.lua"),
+		SCOUT_HMG = BP_GetUpgradeBlueprint("upgrade/omg/axis_pe/items/panzer_elite_scout_HMG.lua"),
+		
+		-- doctrine offmap
+		BURNING_BOMBARD = BP_GetUpgradeBlueprint("upgrade/omg/axis_pe/items/t1_scorched_earth_burning_bombardment.lua"),
+		OFFMAP_SPRINT = BP_GetUpgradeBlueprint("upgrade/omg/axis_pe/items/t1_luft_shift_lines.lua"),
+		STUKA_DIVE = BP_GetUpgradeBlueprint("upgrade/omg/axis_pe/items/t1_luft_stuka_dive.rgd"),
+		BUTT_BOMBS = BP_GetUpgradeBlueprint("upgrade/omg/axis_pe/items/t2_butterly_bombs.lua"),
+		SECTOR_DISABLED = BP_GetUpgradeBlueprint("upgrade/omg/axis_pe/items/t2_sector_disabled.lua"),
+		COUNTER_OFFENSIVE = BP_GetUpgradeBlueprint("upgrade/omg/axis_pe/items/counter_offensive.lua"),
+		STUKA_DIVE_BOMB = BP_GetUpgradeBlueprint("upgrade/omg/axis_pe/items/luft_stuka_dive_bomb.lua"),
+		
+		-- Doctrine Upgrades
+		MOLOTOVS = BP_GetUpgradeBlueprint("upgrade/omg/axis_pe/items/molotov.lua"),
+		BUTTERFLY_BOMB = BP_GetUpgradeBlueprint("upgrade/omg/axis_pe/items/t2_butterfly_bomb_package.lua"),
+		IMP_SCOPES = BP_GetUpgradeBlueprint("upgrade/omg/axis_pe/items/t2_spotting_scope.lua"),
+	},
+}

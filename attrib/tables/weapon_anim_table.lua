@@ -1,0 +1,9 @@
+GameData = Inherit([[]])
+GameData["cooldown_time_name"] = [[]]
+GameData["state_name"] = [[]]
+GameData["track_horizontal"] = [[]]
+GameData["track_horizontal_speed"] = [[]]
+GameData["track_vertical"] = [[]]
+GameData["track_vertical_speed"] = [[]]
+GameData["variety_name"] = [[]]
+GameData["visibility_name"] = [[]]

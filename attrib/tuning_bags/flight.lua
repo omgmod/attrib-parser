@@ -1,0 +1,9 @@
+GameData = Inherit([[]])
+GameData["air_crash_actions"] = Reference([[tables\ability_action_table.lua]])
+GameData["auto_fire_hardpoint_01"] = true 
+GameData["auto_fire_hardpoint_02"] = true 
+GameData["auto_fire_hardpoint_03"] = true 
+GameData["auto_fire_hardpoint_04"] = true 
+GameData["firing_line_offset"] = 1
+GameData["target_lead_in_distance"] = 25
+GameData["target_step_distance"] = 1.5

@@ -1,0 +1,16 @@
+GameData = Inherit([[]])
+GameData["slot_item_bag"] = Reference([[bags\slot_item_bag.lua]])
+GameData["slot_item_bag"]["can_drop"] = false
+GameData["slot_item_bag"]["drop_item_entity"] = [[ebps\gameplay\props\allied_m18_recoilless_rifle_item.lua]]
+GameData["slot_item_bag"]["drop_rate"] = 0.400000006
+GameData["slot_item_bag"]["package_icon"] = [[weapons\weapon_decorator_anti_infantry]]
+GameData["slot_item_bag"]["slot_size"] = 2
+GameData["slot_item_bag"]["speech_code_2"]["code_1"] = [[Bz]]
+GameData["slot_item_bag"]["speech_code_3"]["code_1"] = [[Bzk]]
+GameData["slot_item_bag"]["ui_info"]["hotkey_name"] = [[allies_m18_recoilless_rifle]]
+GameData["slot_item_bag"]["ui_info"]["icon_name"] = [[weapons\weapon_recoilless]]
+GameData["slot_item_bag"]["ui_info"]["screen_name"] = "$97800"
+GameData["slot_item_bag"]["ui_unit_ratings"]["vs_heavyarmor"] = 2
+GameData["slot_item_bag"]["ui_unit_ratings"]["vs_lightarmor"] = 2
+GameData["slot_item_bag"]["ui_unit_ratings"]["vs_structures"] = 2
+GameData["slot_item_bag"]["weapon"]["origin"]["y"] = 1.5

@@ -1,0 +1,16 @@
+GameData = Inherit([[]])
+GameData["entity_blueprint_ext"] = Reference([[ebpextensions\entity_blueprint_ext.lua]])
+GameData["entity_blueprint_ext"]["animator"] = [[gameplay\fx\special\shovel_dirt]]
+GameData["entity_blueprint_ext"]["simbox"] = Reference([[]])
+GameData["entity_blueprint_ext"]["simbox"]["offset"] = Reference([[]])
+GameData["entity_blueprint_ext"]["simbox"]["offset"]["x"] = 0.001090000034
+GameData["entity_blueprint_ext"]["simbox"]["offset"]["y"] = 0.09925999492
+GameData["entity_blueprint_ext"]["simbox"]["offset"]["z"] = -0.0120000001
+GameData["entity_blueprint_ext"]["simbox"]["scale"] = Reference([[]])
+GameData["entity_blueprint_ext"]["simbox"]["scale"]["x"] = 0.09223999828
+GameData["entity_blueprint_ext"]["simbox"]["scale"]["y"] = 0.08971999586
+GameData["entity_blueprint_ext"]["simbox"]["scale"]["z"] = 0.03150000051
+GameData["entity_blueprint_ext"]["suaTimeStamp"] = Reference([[]])
+GameData["entity_blueprint_ext"]["suaTimeStamp"]["filename"] = [[Data:Art\Models\gameplay\fx\special\shovel_dirt.sua]]
+GameData["entity_blueprint_ext"]["suaTimeStamp"]["fileTime"] = "$1154286313"
+GameData["sim_entity_ext"] = Reference([[ebpextensions\sim_entity_ext.lua]])

@@ -1,0 +1,10 @@
+GameData = Inherit([[]])
+GameData["slot_item_bag"] = Reference([[bags\slot_item_bag.lua]])
+GameData["slot_item_bag"]["can_drop"] = false
+GameData["slot_item_bag"]["speech_code_2"]["code_1"] = [[Cr]]
+GameData["slot_item_bag"]["speech_code_3"]["code_1"] = [[Cro]]
+GameData["slot_item_bag"]["weapon"]["origin"]["x"] = -0.3500000238
+GameData["slot_item_bag"]["weapon"]["origin"]["y"] = 1.690000057
+GameData["slot_item_bag"]["weapon"]["origin"]["z"] = 2.610000134
+GameData["slot_item_bag"]["weapon"]["type"] = [[squad]]
+GameData["slot_item_bag"]["weapon"]["weapon"] = [[weapon\allies\flame_throwers\churchill_crocodile_flame_projector.lua]]

@@ -1,0 +1,17 @@
+GameData = Inherit([[]])
+GameData["alert_text"] = "$0"
+GameData["disabled"] = false
+GameData["help_text_desc"] = "$0"
+GameData["help_text_title"] = "$0"
+GameData["icon"] = [[event_cue_icons/icon_default]]
+GameData["lifetime"] = 10
+GameData["ping_minimap"] = false
+GameData["ping_tacticalmap"] = false
+GameData["ping_type"] = [[]]
+GameData["repeat_count"] = 0
+GameData["repeat_radius"] = 0
+GameData["repeat_time"] = 20
+GameData["sound"] = [[general_alert]]
+GameData["text_colour_b"] = 255
+GameData["text_colour_g"] = 255
+GameData["text_colour_r"] = 255

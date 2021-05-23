@@ -1,0 +1,13 @@
+GameData = Inherit([[]])
+GameData["ability_bag"] = Reference([[bags\ability_bag.lua]])
+GameData["ability_bag"]["action_list"]["start_self_actions"]["action_01"] = Reference([[action\ability_action\scar_function_call.lua]])
+GameData["ability_bag"]["action_list"]["start_self_actions"]["action_01"]["function_name"] = [[Resourcing_ExitMenu]]
+GameData["ability_bag"]["activation"] = [[timed]]
+GameData["ability_bag"]["break_formation_distance"] = 5
+GameData["ability_bag"]["caster_close_in_distance"] = 2
+GameData["ability_bag"]["range_ignore"] = true 
+GameData["ability_bag"]["ui_cursor"]["cursor_bad"] = [[modal_ability_cancel]]
+GameData["ability_bag"]["ui_cursor"]["cursor_good"] = [[modal_ability]]
+GameData["ability_bag"]["ui_group_position"] = 1
+GameData["ability_bag"]["ui_info"]["icon_name"] = [[commands\icon_command_back]]
+GameData["ability_bag"]["validate_actions"] = true 

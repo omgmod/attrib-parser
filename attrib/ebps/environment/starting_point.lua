@@ -1,0 +1,17 @@
+GameData = Inherit([[]])
+GameData["entity_blueprint_ext"] = Reference([[ebpextensions\entity_blueprint_ext.lua]])
+GameData["entity_blueprint_ext"]["animator"] = [[environment\starting_point]]
+GameData["entity_blueprint_ext"]["simbox"] = Reference([[]])
+GameData["entity_blueprint_ext"]["simbox"]["offset"] = Reference([[]])
+GameData["entity_blueprint_ext"]["simbox"]["offset"]["x"] = -0.00112000003
+GameData["entity_blueprint_ext"]["simbox"]["offset"]["y"] = 1.993639946
+GameData["entity_blueprint_ext"]["simbox"]["offset"]["z"] = -0.01834000088
+GameData["entity_blueprint_ext"]["simbox"]["scale"] = Reference([[]])
+GameData["entity_blueprint_ext"]["simbox"]["scale"]["x"] = 4.010280132
+GameData["entity_blueprint_ext"]["simbox"]["scale"]["y"] = 2.978620052
+GameData["entity_blueprint_ext"]["simbox"]["scale"]["z"] = 2.99255991
+GameData["entity_blueprint_ext"]["suaTimeStamp"] = Reference([[]])
+GameData["entity_blueprint_ext"]["suaTimeStamp"]["filename"] = [[Data:Art\Models\environment\starting_point.sua]]
+GameData["entity_blueprint_ext"]["suaTimeStamp"]["fileTime"] = "$1154286313"
+GameData["sim_entity_ext"] = Reference([[ebpextensions\sim_entity_ext.lua]])
+GameData["sim_entity_ext"]["rotate_snap"] = 360

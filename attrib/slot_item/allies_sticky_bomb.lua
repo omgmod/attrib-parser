@@ -1,0 +1,13 @@
+GameData = Inherit([[]])
+GameData["slot_item_bag"] = Reference([[bags\slot_item_bag.lua]])
+GameData["slot_item_bag"]["can_stack"] = true 
+GameData["slot_item_bag"]["can_stack_max"] = 5
+GameData["slot_item_bag"]["item_uses"] = 1
+GameData["slot_item_bag"]["slot_size"] = 1
+GameData["slot_item_bag"]["ui_info"]["hotkey_name"] = [[allies_infantry_sticky_bomb_research]]
+GameData["slot_item_bag"]["ui_info"]["icon_name"] = [[abilities\icon_ability_stickybomb]]
+GameData["slot_item_bag"]["ui_unit_ratings"]["vs_heavyarmor"] = 3
+GameData["slot_item_bag"]["ui_unit_ratings"]["vs_lightarmor"] = 4
+GameData["slot_item_bag"]["weapon"]["origin"]["y"] = 2
+GameData["slot_item_bag"]["weapon"]["type"] = [[accessory]]
+GameData["slot_item_bag"]["weapon"]["weapon"] = [[weapon\allies\ballistic_weapon\grenade\sticky_bomb.lua]]

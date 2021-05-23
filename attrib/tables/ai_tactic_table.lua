@@ -1,0 +1,10 @@
+GameData = Inherit([[]])
+GameData["class_list"] = Reference([[tables\ai_tactic_class_table.lua]])
+GameData["custom_targeting"] = false
+GameData["entity_target_filter"] = [[]]
+GameData["position_target_filter"] = [[]]
+GameData["priority"] = -1
+GameData["squad_target_filter"] = [[]]
+GameData["tactic_demand"] = [[]]
+GameData["tactic_filter"] = [[]]
+GameData["tactic_range_override"] = -1

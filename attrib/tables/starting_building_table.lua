@@ -1,0 +1,12 @@
+GameData = Inherit([[]])
+GameData["building_00"] = Reference([[tables\race_to_allied_building_entry.lua]])
+GameData["building_01"] = Reference([[tables\race_to_axis_building_entry.lua]])
+GameData["building_02"] = Reference([[tables\race_to_allied_building_entry.lua]])
+GameData["building_02"]["race"] = [[racebps\allied_commonwealth.lua]]
+GameData["building_03"] = Reference([[tables\race_to_axis_building_entry.lua]])
+GameData["building_03"]["race"] = [[racebps\axis_panzer_elite.lua]]
+GameData["building_04"] = Reference([[tables\race_to_axis_building_entry.lua]])
+GameData["building_05"] = Reference([[tables\race_to_axis_building_entry.lua]])
+GameData["building_06"] = Reference([[tables\race_to_axis_building_entry.lua]])
+GameData["building_07"] = Reference([[tables\race_to_axis_building_entry.lua]])
+GameData["building_08"] = Reference([[tables\race_to_axis_building_entry.lua]])

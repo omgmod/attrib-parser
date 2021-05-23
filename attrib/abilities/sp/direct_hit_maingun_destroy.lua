@@ -1,0 +1,13 @@
+GameData = Inherit([[]])
+GameData["ability_bag"] = Reference([[bags\ability_bag.lua]])
+GameData["ability_bag"]["action_list"]["start_target_actions"]["action_01"] = Reference([[action\ability_action\weapon_direct_hit.lua]])
+GameData["ability_bag"]["action_list"]["start_target_actions"]["action_01"]["critical"] = [[critical\vehicle_destroy_maingun.lua]]
+GameData["ability_bag"]["action_list"]["start_target_actions"]["action_01"]["damage"] = [[damage\damage_yellow.lua]]
+GameData["ability_bag"]["activation"] = [[targeted]]
+GameData["ability_bag"]["break_formation_distance"] = 5
+GameData["ability_bag"]["caster_close_in_distance"] = 2
+GameData["ability_bag"]["engage_combat"] = true 
+GameData["ability_bag"]["range"] = 35
+GameData["ability_bag"]["squad_caster"] = [[one_entity]]
+GameData["ability_bag"]["ui_cursor"]["cursor_bad"] = [[modal_ability_cancel]]
+GameData["ability_bag"]["ui_cursor"]["cursor_good"] = [[modal_ability]]

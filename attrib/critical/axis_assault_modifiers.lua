@@ -1,0 +1,11 @@
+GameData = Inherit([[]])
+GameData["critical_bag"] = Reference([[bags\critical_bag.lua]])
+GameData["critical_bag"]["actions"]["action_01"] = Reference([[action\critical_action\apply_modifiers_action.lua]])
+GameData["critical_bag"]["actions"]["action_01"]["modifiers"]["modifier_01"] = Reference([[modifiers\received_suppression_squad_modifier.lua]])
+GameData["critical_bag"]["actions"]["action_01"]["modifiers"]["modifier_01"]["value"] = 0.75
+GameData["critical_bag"]["actions"]["action_01"]["modifiers"]["modifier_02"] = Reference([[modifiers\received_accuracy_modifier.lua]])
+GameData["critical_bag"]["actions"]["action_01"]["modifiers"]["modifier_02"]["value"] = 2
+GameData["critical_bag"]["actions"]["action_01"]["modifiers"]["modifier_03"] = Reference([[modifiers\posture_speed_modifier.lua]])
+GameData["critical_bag"]["actions"]["action_01"]["modifiers"]["modifier_03"]["value"] = 2
+GameData["critical_bag"]["description"] = [[Assaulting]]
+GameData["critical_bag"]["kicker_message"]["message_colour_r"] = 255

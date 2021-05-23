@@ -1,0 +1,12 @@
+GameData = Inherit([[]])
+GameData["animated_spawning"] = false
+GameData["animated_spawning_seconds"] = 0
+GameData["desync_action_name"] = [[]]
+GameData["entity_table"] = Reference([[tables\entity_table.lua]])
+GameData["fx_rally_point"] = [[]]
+GameData["must_be_in_supply"] = false
+GameData["reinforce_radius"] = 0
+GameData["spawn_at_map_entry_point"] = false
+GameData["squad_table"] = Reference([[tables\squad_table.lua]])
+GameData["sync_action_name"] = [[]]
+GameData["transport_vehicle"] = [[]]

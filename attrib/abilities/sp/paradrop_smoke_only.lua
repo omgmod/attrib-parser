@@ -1,0 +1,12 @@
+GameData = Inherit([[]])
+GameData["ability_bag"] = Reference([[bags\ability_bag.lua]])
+GameData["ability_bag"]["action_list"]["start_target_actions"]["action_01"] = Reference([[action\ability_action\trigger_dca_action.lua]])
+GameData["ability_bag"]["action_list"]["start_target_actions"]["action_01"]["dca_action_name"] = [[UI\paradrop_warning_smoke]]
+GameData["ability_bag"]["action_list"]["start_target_actions"]["action_01"]["duration"] = 3
+GameData["ability_bag"]["activation"] = [[targeted]]
+GameData["ability_bag"]["break_formation_distance"] = 5
+GameData["ability_bag"]["caster_close_in_distance"] = 2
+GameData["ability_bag"]["disable_when_active"] = true 
+GameData["ability_bag"]["range_ignore"] = true 
+GameData["ability_bag"]["ui_cursor"]["cursor_bad"] = [[modal_ability_cancel]]
+GameData["ability_bag"]["ui_cursor"]["cursor_good"] = [[modal_ability]]

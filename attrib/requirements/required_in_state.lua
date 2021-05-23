@@ -1,0 +1,9 @@
+GameData = Inherit([[]])
+GameData["0x2874A7D3"] = -1
+GameData["garrisoned"] = false
+GameData["healed"] = false
+GameData["injured"] = false
+GameData["leader"] = false
+GameData["not_moving"] = false
+GameData["reason"] = [[usage]]
+GameData["ui_name"] = "$0"

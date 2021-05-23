@@ -1,0 +1,6 @@
+GameData = Inherit([[]])
+GameData["ui_decorator_action_01"] = Reference([[tables\ui_decorator_action_table.lua]])
+GameData["ui_decorator_action_02"] = Reference([[tables\ui_decorator_action_table.lua]])
+GameData["ui_decorator_action_03"] = Reference([[tables\ui_decorator_action_table.lua]])
+GameData["ui_decorator_action_04"] = Reference([[tables\ui_decorator_action_table.lua]])
+GameData["ui_decorator_action_05"] = Reference([[tables\ui_decorator_action_table.lua]])

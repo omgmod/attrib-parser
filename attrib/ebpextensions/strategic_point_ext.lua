@@ -1,0 +1,11 @@
+GameData = Inherit([[]])
+GameData["capture_time"] = 1
+GameData["captured_actions"] = Reference([[tables\action_table.lua]])
+GameData["captured_actions_in_territory"] = Reference([[tables\action_table.lua]])
+GameData["force_victory_point_minimap_icon"] = false
+GameData["is_victory_point"] = false
+GameData["revert_time"] = 1
+GameData["secure_radius"] = 0
+GameData["secured_actions"] = Reference([[tables\action_table.lua]])
+GameData["secured_actions_in_territory"] = Reference([[tables\action_table.lua]])
+GameData["use_decorator"] = true 

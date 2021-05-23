@@ -1,0 +1,9 @@
+GameData = Inherit([[]])
+GameData["slot_item_bag"] = Reference([[bags\slot_item_bag.lua]])
+GameData["slot_item_bag"]["can_drop"] = false
+GameData["slot_item_bag"]["drop_item_entity"] = [[ebps\gameplay\props\allied_m1919_lmg_item.lua]]
+GameData["slot_item_bag"]["slot_size"] = 1
+GameData["slot_item_bag"]["ui_unit_ratings"]["vs_infantry"] = 1
+GameData["slot_item_bag"]["weapon"]["origin"]["y"] = 1.5
+GameData["slot_item_bag"]["weapon"]["type"] = [[accessory]]
+GameData["slot_item_bag"]["weapon"]["weapon"] = [[weapon\allies\small_arms\single_fire\rifle\m1917_sniper_mech_inf.rgd]]

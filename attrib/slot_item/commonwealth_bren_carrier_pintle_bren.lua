@@ -1,0 +1,13 @@
+GameData = Inherit([[]])
+GameData["slot_item_bag"] = Reference([[bags\slot_item_bag.lua]])
+GameData["slot_item_bag"]["can_drop"] = false
+GameData["slot_item_bag"]["hardpoint"] = 2
+GameData["slot_item_bag"]["on_add_actions"]["action_01"] = Reference([[action\critical_action\apply_modifiers_action.lua]])
+GameData["slot_item_bag"]["on_add_actions"]["action_03"] = Reference([[action\critical_action\apply_crew_action.lua]])
+GameData["slot_item_bag"]["on_add_actions"]["action_03"]["crew_name"] = [[gunner_pintle]]
+GameData["slot_item_bag"]["slot_size"] = 1
+GameData["slot_item_bag"]["weapon"]["origin"]["x"] = 0.8100000024
+GameData["slot_item_bag"]["weapon"]["origin"]["y"] = 2.200000048
+GameData["slot_item_bag"]["weapon"]["origin"]["z"] = 0.400000006
+GameData["slot_item_bag"]["weapon"]["type"] = [[squad]]
+GameData["slot_item_bag"]["weapon"]["weapon"] = [[weapon\allies_cw\small_arms\machine_gun\light_machine_gun\bren_mark_2_lmg_pintle.lua]]

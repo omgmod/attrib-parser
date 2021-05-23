@@ -1,0 +1,12 @@
+GameData = Inherit([[]])
+GameData["slot_item_bag"] = Reference([[bags\slot_item_bag.lua]])
+GameData["slot_item_bag"]["hardpoint"] = 5
+GameData["slot_item_bag"]["has_speech_code"] = true 
+GameData["slot_item_bag"]["slot_size"] = 1
+GameData["slot_item_bag"]["speech_code_2"]["code_1"] = [[Ca]]
+GameData["slot_item_bag"]["speech_code_3"]["code_1"] = [[Cal]]
+GameData["slot_item_bag"]["ui_info"]["hotkey_name"] = [[ally_sherman_calliope]]
+GameData["slot_item_bag"]["weapon"]["length"] = 1
+GameData["slot_item_bag"]["weapon"]["origin"]["y"] = 8.300000191
+GameData["slot_item_bag"]["weapon"]["type"] = [[squad]]
+GameData["slot_item_bag"]["weapon"]["weapon"] = [[weapon\allies\ballistic_weapon\rockets\calliope_at.lua]]

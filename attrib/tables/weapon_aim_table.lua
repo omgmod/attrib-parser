@@ -1,0 +1,10 @@
+GameData = Inherit([[]])
+GameData["fire_aim_time"] = Reference([[tables\bound_table.lua]])
+GameData["fire_aim_time_multiplier"] = Reference([[tables\range_table.lua]])
+GameData["fire_aim_time_multiplier"]["distant"] = 1
+GameData["fire_aim_time_multiplier"]["long"] = 1
+GameData["fire_aim_time_multiplier"]["medium"] = 1
+GameData["fire_aim_time_multiplier"]["short"] = 1
+GameData["post_firing_aim_time"] = 0
+GameData["post_firing_cooldown_interval"] = 0
+GameData["ready_aim_time"] = Reference([[tables\bound_table.lua]])

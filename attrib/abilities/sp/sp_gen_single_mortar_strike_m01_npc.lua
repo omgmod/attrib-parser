@@ -1,0 +1,14 @@
+GameData = Inherit([[]])
+GameData["ability_bag"] = Reference([[bags\ability_bag.lua]])
+GameData["ability_bag"]["action_list"]["start_target_actions"]["action_01"] = Reference([[action\ability_action\off_map_artillery.lua]])
+GameData["ability_bag"]["action_list"]["start_target_actions"]["action_01"]["num_salvo"] = 1
+GameData["ability_bag"]["action_list"]["start_target_actions"]["action_01"]["radius"] = 1
+GameData["ability_bag"]["action_list"]["start_target_actions"]["action_01"]["source_offset_x"] = 1
+GameData["ability_bag"]["action_list"]["start_target_actions"]["action_01"]["source_offset_z"] = 1
+GameData["ability_bag"]["action_list"]["start_target_actions"]["action_01"]["weapon_name"] = [[weapon\axis\ballistic_weapon\mortar\sp_quick_grw34_81mm_mortar_m01_npc.lua]]
+GameData["ability_bag"]["activation"] = [[targeted]]
+GameData["ability_bag"]["break_formation_distance"] = 5
+GameData["ability_bag"]["caster_close_in_distance"] = 2
+GameData["ability_bag"]["range_ignore"] = true 
+GameData["ability_bag"]["ui_cursor"]["cursor_bad"] = [[modal_ability_cancel]]
+GameData["ability_bag"]["ui_cursor"]["cursor_good"] = [[modal_ability]]

@@ -1,0 +1,10 @@
+GameData = Inherit([[]])
+GameData["accuracy_multiplier"] = 1
+GameData["damage_multiplier"] = 1
+GameData["disable_auto_search"] = false
+GameData["disable_target"] = false
+GameData["moving_accuracy_multiplier"] = 1
+GameData["penetration_multiplier"] = 1
+GameData["priority"] = 25
+GameData["rear_penetration_multiplier"] = 1
+GameData["suppression_multiplier"] = 1

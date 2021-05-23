@@ -1,0 +1,15 @@
+GameData = Inherit([[]])
+GameData["critical_bag"] = Reference([[bags\critical_bag.lua]])
+GameData["critical_bag"]["actions"]["action_01"] = Reference([[action\critical_action\slot_item_remove.lua]])
+GameData["critical_bag"]["actions"]["action_01"]["slot_item"] = [[slot_item\allies_50cal_m8_greyhound.lua]]
+GameData["critical_bag"]["actions"]["action_02"] = Reference([[action\critical_action\apply_crew_action.lua]])
+GameData["critical_bag"]["actions"]["action_02"]["apply_removal"] = true 
+GameData["critical_bag"]["actions"]["action_02"]["crew_name"] = [[Gunner]]
+GameData["critical_bag"]["actions"]["action_02"]["kill"] = true 
+GameData["critical_bag"]["kicker_message"]["message"] = "$164850"
+GameData["critical_bag"]["kicker_message"]["message_colour_r"] = 255
+GameData["critical_bag"]["kicker_message"]["message_seconds"] = 5
+GameData["critical_bag"]["requirements"]["required_1"] = Reference([[requirements\required_slot_item.lua]])
+GameData["critical_bag"]["requirements"]["required_1"]["display_requirement"] = false
+GameData["critical_bag"]["requirements"]["required_1"]["min_owned"] = 1
+GameData["critical_bag"]["requirements"]["required_1"]["slot_item"] = [[slot_item\allies_50cal_m8_greyhound.lua]]

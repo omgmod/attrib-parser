@@ -1,0 +1,11 @@
+GameData = Inherit([[]])
+GameData["slot_item_bag"] = Reference([[bags\slot_item_bag.lua]])
+GameData["slot_item_bag"]["on_add_actions"]["action_01"] = Reference([[action\critical_action\apply_modifiers_action.lua]])
+GameData["slot_item_bag"]["on_add_actions"]["action_01"]["modifiers"]["modifier_01"] = Reference([[modifiers\received_damage_modifier.lua]])
+GameData["slot_item_bag"]["on_add_actions"]["action_01"]["modifiers"]["modifier_01"]["application_type"] = [[apply_to_entity_type]]
+GameData["slot_item_bag"]["on_add_actions"]["action_01"]["modifiers"]["modifier_01"]["target_type_name"] = [[ebps\races\allies\soldiers\infantry_rifleman.lua]]
+GameData["slot_item_bag"]["on_add_actions"]["action_01"]["modifiers"]["modifier_01"]["value"] = 0.1000000015
+GameData["slot_item_bag"]["owner_type"] = [[player]]
+GameData["slot_item_bag"]["slot_size"] = 1
+GameData["slot_item_bag"]["ui_info"]["hotkey_name"] = [[allies_flak_vest_research]]
+GameData["slot_item_bag"]["ui_info"]["icon_name"] = [[abilities\icon_ability_allied_vest]]

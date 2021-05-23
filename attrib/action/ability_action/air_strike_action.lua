@@ -1,0 +1,12 @@
+GameData = Inherit([[]])
+GameData["aircraft_name"] = [[ebps\races\allies\vehicles\p47_thunderbolt.lua]]
+GameData["number_aircraft"] = 2
+GameData["number_of_passes"] = 1
+GameData["random_direction"] = false
+GameData["seconds_between_passes"] = 3
+GameData["source_offset_x"] = 500
+GameData["source_offset_y"] = 500
+GameData["source_offset_z"] = 50
+GameData["time_range_between_planes_maximum"] = 10
+GameData["time_range_between_planes_minimum"] = 3
+GameData["use_long_path"] = true 

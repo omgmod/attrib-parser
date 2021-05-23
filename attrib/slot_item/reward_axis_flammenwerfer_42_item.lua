@@ -1,0 +1,13 @@
+GameData = Inherit([[]])
+GameData["slot_item_bag"] = Reference([[bags\slot_item_bag.lua]])
+GameData["slot_item_bag"]["can_drop"] = false
+GameData["slot_item_bag"]["has_speech_code"] = true 
+GameData["slot_item_bag"]["is_entity_user"] = true 
+GameData["slot_item_bag"]["package_icon"] = [[weapons\weapon_decorator_anti_infantry]]
+GameData["slot_item_bag"]["slot_size"] = 2
+GameData["slot_item_bag"]["speech_code_2"]["code_1"] = [[Ft]]
+GameData["slot_item_bag"]["speech_code_3"]["code_1"] = [[Flt]]
+GameData["slot_item_bag"]["ui_info"]["icon_name"] = [[weapons\weapon_flamethrower]]
+GameData["slot_item_bag"]["ui_unit_ratings"]["vs_infantry"] = 2
+GameData["slot_item_bag"]["weapon"]["origin"]["y"] = 1.5
+GameData["slot_item_bag"]["weapon"]["type"] = [[]]

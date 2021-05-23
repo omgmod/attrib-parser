@@ -1,0 +1,9 @@
+GameData = Inherit([[]])
+GameData["slot_item_bag"] = Reference([[bags\slot_item_bag.lua]])
+GameData["slot_item_bag"]["slot_size"] = 1
+GameData["slot_item_bag"]["ui_info"]["help_text"] = "$129600"
+GameData["slot_item_bag"]["ui_info"]["hotkey_name"] = [[allies_m2_60mm_mortar]]
+GameData["slot_item_bag"]["ui_info"]["screen_name"] = "$129601"
+GameData["slot_item_bag"]["weapon"]["origin"]["y"] = 1.5
+GameData["slot_item_bag"]["weapon"]["type"] = [[squad]]
+GameData["slot_item_bag"]["weapon"]["weapon"] = [[weapon\allies\ballistic_weapon\mortar\m2_60mm_mortar.lua]]

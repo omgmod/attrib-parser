@@ -1,0 +1,6 @@
+GameData = Inherit([[]])
+GameData["role_01"] = Reference([[tables\crew_entry.lua]])
+GameData["role_02"] = Reference([[tables\crew_entry.lua]])
+GameData["role_03"] = Reference([[tables\crew_entry.lua]])
+GameData["role_04"] = Reference([[tables\crew_entry.lua]])
+GameData["role_05"] = Reference([[tables\crew_entry.lua]])

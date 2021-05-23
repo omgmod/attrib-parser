@@ -1,0 +1,13 @@
+GameData = Inherit([[]])
+GameData["critical_bag"] = Reference([[bags\critical_bag.lua]])
+GameData["critical_bag"]["actions"]["action_01"] = Reference([[action\critical_action\burn_action.lua]])
+GameData["critical_bag"]["actions"]["action_01"]["fire_damage"] = 25
+GameData["critical_bag"]["actions"]["action_02"] = Reference([[action\critical_action\make_dead.lua]])
+GameData["critical_bag"]["actions"]["action_02"]["death_reaction_table"]["death_reaction_01"]["death_reaction"] = [[burn_zombie]]
+GameData["critical_bag"]["actions"]["action_02"]["death_reaction_table"]["death_reaction_01"]["percentage_chance"] = 0.3300000131
+GameData["critical_bag"]["actions"]["action_02"]["death_reaction_table"]["death_reaction_02"]["death_reaction"] = [[burn_flounder]]
+GameData["critical_bag"]["actions"]["action_02"]["death_reaction_table"]["death_reaction_02"]["percentage_chance"] = 0.3300000131
+GameData["critical_bag"]["actions"]["action_02"]["death_reaction_table"]["death_reaction_03"]["death_reaction"] = [[burn_death]]
+GameData["critical_bag"]["actions"]["action_02"]["death_reaction_table"]["death_reaction_03"]["percentage_chance"] = 0.3300000131
+GameData["critical_bag"]["kicker_message"]["message_colour_a"] = 0
+GameData["critical_bag"]["kicker_message"]["message_colour_r"] = 255

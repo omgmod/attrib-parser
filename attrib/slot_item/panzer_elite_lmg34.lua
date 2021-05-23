@@ -1,0 +1,14 @@
+GameData = Inherit([[]])
+GameData["slot_item_bag"] = Reference([[bags\slot_item_bag.lua]])
+GameData["slot_item_bag"]["can_stack"] = 1
+GameData["slot_item_bag"]["drop_item_entity"] = [[ebps\gameplay\props\luft_lmg_34.rgd]]
+GameData["slot_item_bag"]["drop_rate"] = 0.200000003
+GameData["slot_item_bag"]["package_icon"] = [[weapons\weapon_decorator_anti_infantry]]
+GameData["slot_item_bag"]["slot_size"] = 1
+GameData["slot_item_bag"]["speech_code_2"]["code_1"] = [[Au]]
+GameData["slot_item_bag"]["speech_code_3"]["code_1"] = [[AuR]]
+GameData["slot_item_bag"]["ui_info"]["icon_name"] = [[weapons\weapon_mg42]]
+GameData["slot_item_bag"]["ui_unit_ratings"]["vs_infantry"] = 1
+GameData["slot_item_bag"]["weapon"]["origin"]["y"] = 1.5
+GameData["slot_item_bag"]["weapon"]["type"] = [[squad]]
+GameData["slot_item_bag"]["weapon"]["weapon"] = [[weapon\axis_pe\small_arms\machine_gun\light_machine_gun\mg34_lmg_Doctrine_LMG42skin.rgd]]
