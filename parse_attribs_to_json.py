@@ -17,7 +17,7 @@ CONST_FACTIONS = {'ALLY', 'CMW', 'AXIS', 'PE'}
 ATTRIB_FACTIONS = {'allies', 'allies_cw', 'axis', 'axis_pe'}
 
 # We only care about these directories
-TOP_DIRS = {'weapon', 'ebps', 'sbps', 'abilities', 'upgrade'}
+TOP_DIRS = {'weapon', 'ebps', 'sbps', 'abilities', 'upgrade', 'slot_item', 'dot_type', 'tables', 'damage', 'critical', 'critical_combo'}
 
 
 def with_perf_timing(fn: Callable) -> Callable:
@@ -127,6 +127,9 @@ def save_to_json(attrib_dict: Union[Dict, DefaultDict], json_file_name: AnyStr) 
     attrib = dict(attrib_dict)
     FileUtils.save_dict_to_json(json_file_name, attrib)
 
+
+# Remove old json
+FileUtils.clear_directory_of_filetype('./json', '.json')
 
 # Get unit and upgrade consts by faction
 unit_consts_by_faction, upgrade_consts_by_faction = parse_unit_and_upgrade_const_files()
