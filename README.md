@@ -2,15 +2,23 @@
 Once attrib SGA files are converted to Lua in Corsix, this tool will parse attrib directories into JSON.
 
 Currently parses the following attrib directories:
-- Abilities
-- Ebps
-- Sbps
-- Upgrade
-- Weapon
+- `abilities`
+- `abps`
+- `sbps`
+- `upgrade`
+- `weapon`
 
-Also parses OMGmod const scar files:
-- omg_unit_const.scar
-- omg_ability_upgrade_const.scar
+
+- `slot_item`
+- `dot_type`
+- `tables`
+- `damage`
+- `critical`
+- `critical_combo`
+
+Also parses the following OMGmod const scar files:
+- `omg_unit_const.scar`
+- `omg_ability_upgrade_const.scar`
 
 
 ## Usage
