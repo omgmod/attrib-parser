@@ -3,7 +3,7 @@ Once attrib SGA files are converted to Lua in Corsix, this tool will parse attri
 
 Currently parses the following attrib directories:
 - `abilities`
-- `abps`
+- `ebps`
 - `sbps`
 - `upgrade`
 - `weapon`

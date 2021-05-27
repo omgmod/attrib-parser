@@ -1,7 +1,7 @@
 import time
 from collections import defaultdict
 from pathlib import Path
-from typing import AnyStr, DefaultDict, Tuple, Dict, Callable, Union
+from typing import AnyStr, DefaultDict, Tuple, Dict, Callable, Union, Set, List
 
 from FileUtils import FileUtils
 from slpp import slpp as lua
@@ -17,20 +17,24 @@ CONST_FACTIONS = {'ALLY', 'CMW', 'AXIS', 'PE'}
 ATTRIB_FACTIONS = {'allies', 'allies_cw', 'axis', 'axis_pe'}
 
 # We only care about these directories
-TOP_DIRS = {'weapon', 'ebps', 'sbps', 'abilities', 'upgrade', 'slot_item', 'dot_type', 'tables', 'damage', 'critical', 'critical_combo'}
+TOP_DIRS = {'weapon', 'ebps', 'sbps', 'abilities', 'upgrade',
+            'slot_item', 'dot_type', 'damage', 'critical', 'critical_combo'}
+
+TYPES = {'type_target_weapon', 'type_target_critical', 'type_ability_target_type',
+         'type_construction', 'requirements', 'modifiers', 'tables', 'action'}
 
 
 def with_perf_timing(fn: Callable) -> Callable:
-    def wrapper(*args):
+    def wrapper(*args, **kwargs):
         # Expects that arg[1] will be the identifying name of this action
-        if len(args) == 2:
+        if len(args) >= 2:
             name = f'[{args[1]}]'
         else:
             name = ''
         time_start = time.process_time()
         print(f"Starting {fn.__name__} {name}")
-        result = fn(*args)
-        print(f"Finished {fn.__name__} {name}- elapsed {time.process_time() - time_start}s")
+        result = fn(*args, **kwargs)
+        print(f"Finished {fn.__name__} {name}- elapsed {round(time.process_time() - time_start, 2)}s")
         return result
 
     return wrapper
@@ -96,8 +100,11 @@ def parse_lua_to_dict(filepath: Path) -> DefaultDict:
     return result
 
 
-def iterate_through_subdirectories(directory: Path) -> DefaultDict:
+def iterate_through_attrib_subdirectories(directory: Path,
+                                          subdirectories: Union[Set, None] = None,
+                                          ignore_top_level_files: bool = False) -> DefaultDict:
     result = defaultdict(dict)
+    filter_by_subdirectory = subdirectories is not None
     for file_path in directory.rglob('*.lua'):
         # Tuple in the form of ('attrib', 'weapon', 'allies_cw', 'barrage_weapon', 'commonwealth_offmapartillery_creeping_barrage.lua')
         # Can skip index 0, 1, 2 as we already know the attrib, weapon, and faction
@@ -105,6 +112,12 @@ def iterate_through_subdirectories(directory: Path) -> DefaultDict:
         relevant_path_parts = [x for idx, x in enumerate(file_path.parts) if idx > 1]
         filename = relevant_path_parts[-1]
         del relevant_path_parts[-1]
+        is_top_level_file = len(relevant_path_parts) == 0
+
+        # only when not ignoring top level files and len(relevent_path_parts) == 0 (meaning top level file) does that return False and we read the file
+        if filter_by_subdirectory:
+            if (ignore_top_level_files and is_top_level_file) or (not is_top_level_file and relevant_path_parts[0] not in subdirectories):
+                continue
 
         current_access = result
         for path_part in relevant_path_parts:
@@ -118,23 +131,85 @@ def iterate_through_subdirectories(directory: Path) -> DefaultDict:
 
 
 @with_perf_timing
-def parse_attrib_dir(attrib_dir: Path, directory: AnyStr) -> DefaultDict:
-    return iterate_through_subdirectories(attrib_dir)
+def parse_attrib_dir(attrib_dir: Path,
+                     directory: AnyStr,
+                     subdirectories: Union[Set, None] = None,
+                     ignore_top_level_files: bool = False) -> DefaultDict:
+    return iterate_through_attrib_subdirectories(attrib_dir, subdirectories=subdirectories, ignore_top_level_files=ignore_top_level_files)
+
+
+def iterate_through_flat_type_subdirectories(directory: Path) -> List:
+    result = []
+    for file_path in directory.rglob('*.lua'):
+        filename = file_path.parts[-1]
+        result.append(filename.replace('.lua', ''))
+    return result
+
+
+def iterate_through_nested_type_subdirectories(directory: Path) -> Dict:
+    result = {}
+    for file_path in directory.rglob('*.lua'):
+        # Tuple in the form of ('attrib', 'action', 'ability_action', 'reinforcements_action.lua')
+        # Can skip index 0, 1 as we already know the attrib, action folder
+        # Remove last index to get file name
+        relevant_path_parts = [x for idx, x in enumerate(file_path.parts) if idx > 1]
+        filename = relevant_path_parts[-1]
+        del relevant_path_parts[-1]
+        depth = len(relevant_path_parts)
+
+        current_access = result
+        for idx, path_part in enumerate(relevant_path_parts):
+            # iteratively add or access the stat dict using relevant path parts to reach the place we should put our new record
+            if idx < depth - 1:
+                if path_part not in current_access:
+                    current_access[path_part] = {}
+            else:
+                # at last depth before files, check for a list
+                if path_part not in current_access:
+                    current_access[path_part] = []
+            current_access = current_access[path_part]
+
+        current_access.append(filename.replace('.lua', ''))
+
+    return result
 
 
 @with_perf_timing
-def save_to_json(attrib_dict: Union[Dict, DefaultDict], json_file_name: AnyStr) -> None:
-    attrib = dict(attrib_dict)
+def parse_type_dir(type_dir: Path, directory: AnyStr) -> Union[Dict, List]:
+    # Check if has any subdirectories
+    has_subdirs = any([x.is_dir() for x in type_dir.iterdir()])
+
+    # If so, result is a dict
+    if has_subdirs:
+        return iterate_through_nested_type_subdirectories(type_dir)
+
+    # If not, result is a list
+    else:
+        return iterate_through_flat_type_subdirectories(type_dir)
+
+
+@with_perf_timing
+def save_to_json(attrib_dict: Union[Dict, DefaultDict, List], json_file_name: AnyStr) -> None:
+    if type(attrib_dict) == defaultdict:
+        attrib = dict(attrib_dict)
+    else:
+        attrib = attrib_dict
     FileUtils.save_dict_to_json(json_file_name, attrib)
 
 
+print("-----------------Cleanup old JSON------------------------------")
+
 # Remove old json
 FileUtils.clear_directory_of_filetype('./json', '.json')
+
+print("-----------------Parse Consts-------------------------------")
 
 # Get unit and upgrade consts by faction
 unit_consts_by_faction, upgrade_consts_by_faction = parse_unit_and_upgrade_const_files()
 save_to_json(unit_consts_by_faction, f'./json/unit_consts_by_faction.json')
 save_to_json(upgrade_consts_by_faction, f'./json/upgrade_consts_by_faction.json')
+
+print("-----------------Parse Attribs-------------------------------")
 
 # Get references to the root attrib subdirectories as defined in TOP_DIRS
 rootdir = Path('./attrib')
@@ -142,8 +217,31 @@ subdirs = {x.name: x for x in rootdir.iterdir() if x.is_dir() and x.name in TOP_
 
 # Iterate through TOP_DIRS subdirectories, parsing all files in them and writing to JSON
 for directory_name in TOP_DIRS:
-    save_to_json(parse_attrib_dir(subdirs[directory_name], directory_name), f'./json/{directory_name}_stats.json')
+    if directory_name == 'ebps':
+        # For ebps, only parse the projectile and races subdirectories
+        save_to_json(parse_attrib_dir(subdirs[directory_name],
+                                      directory_name,
+                                      subdirectories={'projectile', 'races'}),
+                     f'./json/{directory_name}_stats.json')
+    if directory_name == 'upgrade':
+        # For upgrade, only parse the omg subdirectory
+        save_to_json(parse_attrib_dir(subdirs[directory_name],
+                                      directory_name,
+                                      subdirectories={'omg'},
+                                      ignore_top_level_files=True),
+                     f'./json/{directory_name}_stats.json')
+    else:
+        save_to_json(parse_attrib_dir(subdirs[directory_name], directory_name),
+                     f'./json/{directory_name}_stats.json')
 
-print(f"Finished parsing attribs to JSON - elapsed {time.process_time() - start}")
+print("----------------Parse Types--------------------------------")
+
+# For types, get all subdirectories as defined in TYPES
+type_dirs = {x.name: x for x in rootdir.iterdir() if x.is_dir() and x.name in TYPES}
+for directory_name in TYPES:
+    save_to_json(parse_type_dir(type_dirs[directory_name], directory_name),
+                 f'./json/{directory_name}_enum.json')
+
+print(f"Finished parsing attribs to JSON - elapsed {round(time.process_time() - start, 2)}s")
 
 # SPECIAL CASE FOR BUILDER TRUCKS TODO
