@@ -41,7 +41,7 @@ def with_perf_timing(fn: Callable) -> Callable:
 
 
 @with_perf_timing
-def parse_unit_and_upgrade_const_files() -> Tuple[Dict, Dict]:
+def parse_unit_upgrade_and_doc_const_files() -> Tuple[Dict, Dict, Dict]:
     # Parse units
     unit_file = FileUtils.read_file('./consts/omg_unit_const.scar')
     unit_file = unit_file.replace("OMGSBPS =", "").replace("BP_GetSquadBlueprint(", "").replace(")", "")
@@ -53,7 +53,12 @@ def parse_unit_and_upgrade_const_files() -> Tuple[Dict, Dict]:
                                                                                      "").replace(")", "")
     upgrade_consts = lua.decode(upgrade_file)
 
-    return unit_consts, upgrade_consts
+    # Parse docmarkers
+    doc_file = FileUtils.read_file('./consts/omg_doc_const.scar')
+    doc_file = doc_file.split("OMGDOCUPG =")[1].replace("BP_GetUpgradeBlueprint(", "").replace(")", "")
+    doc_consts = lua.decode(doc_file)
+
+    return unit_consts, upgrade_consts, doc_consts
 
 
 def parse_lua_to_dict(filepath: Path) -> DefaultDict:
@@ -205,9 +210,10 @@ FileUtils.clear_directory_of_filetype('./json', '.json')
 print("-----------------Parse Consts-------------------------------")
 
 # Get unit and upgrade consts by faction
-unit_consts_by_faction, upgrade_consts_by_faction = parse_unit_and_upgrade_const_files()
+unit_consts_by_faction, upgrade_consts_by_faction, doc_consts_by_faction = parse_unit_upgrade_and_doc_const_files()
 save_to_json(unit_consts_by_faction, f'./json/unit_consts_by_faction.json')
 save_to_json(upgrade_consts_by_faction, f'./json/upgrade_consts_by_faction.json')
+save_to_json(doc_consts_by_faction, f'./json/doc_consts_by_faction.json')
 
 print("-----------------Parse Attribs-------------------------------")
 
