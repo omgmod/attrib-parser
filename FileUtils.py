@@ -33,7 +33,7 @@ class FileUtils:
     @staticmethod
     def save_dict_to_json(filename: AnyStr, data: Dict) -> None:
         with open(filename, mode='w') as json_file:
-            json.dump(data, json_file)
+            json.dump(data, json_file, indent=4)
 
     @staticmethod
     def clear_directory_of_filetype(folderpath: AnyStr, filetype: AnyStr) -> None:
