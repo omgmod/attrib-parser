@@ -227,7 +227,7 @@ for directory_name in TOP_DIRS:
         # For ebps, only parse the projectile and races subdirectories
         save_to_json(parse_attrib_dir(subdirs[directory_name],
                                       directory_name,
-                                      subdirectories={'projectile', 'races'}),
+                                      subdirectories={'projectile', 'races', 'props', 'gameplay'}),
                      f'./json/{directory_name}_stats.json')
     if directory_name == 'upgrade':
         # For upgrade, only parse the omg subdirectory
