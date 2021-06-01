@@ -107,9 +107,11 @@ def parse_lua_to_dict(filepath: Path) -> DefaultDict:
 
 def iterate_through_attrib_subdirectories(directory: Path,
                                           subdirectories: Union[Set, None] = None,
+                                          exclude_subsubdirectories: Union[Set, None] = None,
                                           ignore_top_level_files: bool = False) -> DefaultDict:
     result = defaultdict(dict)
     filter_by_subdirectory = subdirectories is not None
+    filter_by_subsubdirectory = exclude_subsubdirectories is not None
     for file_path in directory.rglob('*.lua'):
         # Tuple in the form of ('attrib', 'weapon', 'allies_cw', 'barrage_weapon', 'commonwealth_offmapartillery_creeping_barrage.lua')
         # Can skip index 0, 1, 2 as we already know the attrib, weapon, and faction
@@ -120,9 +122,12 @@ def iterate_through_attrib_subdirectories(directory: Path,
         is_top_level_file = len(relevant_path_parts) == 0
 
         # only when not ignoring top level files and len(relevent_path_parts) == 0 (meaning top level file) does that return False and we read the file
-        if filter_by_subdirectory:
-            if (ignore_top_level_files and is_top_level_file) or (not is_top_level_file and relevant_path_parts[0] not in subdirectories):
-                continue
+        if ignore_top_level_files and is_top_level_file:
+            continue
+        if filter_by_subdirectory and relevant_path_parts[0] not in subdirectories:
+            continue
+        if filter_by_subsubdirectory and len(relevant_path_parts) > 1 and relevant_path_parts[1] in exclude_subsubdirectories:
+            continue
 
         current_access = result
         for path_part in relevant_path_parts:
@@ -139,8 +144,9 @@ def iterate_through_attrib_subdirectories(directory: Path,
 def parse_attrib_dir(attrib_dir: Path,
                      directory: AnyStr,
                      subdirectories: Union[Set, None] = None,
+                     exclude_subsubdirectories: Union[Set, None] = None,
                      ignore_top_level_files: bool = False) -> DefaultDict:
-    return iterate_through_attrib_subdirectories(attrib_dir, subdirectories=subdirectories, ignore_top_level_files=ignore_top_level_files)
+    return iterate_through_attrib_subdirectories(attrib_dir, subdirectories=subdirectories, exclude_subsubdirectories=exclude_subsubdirectories, ignore_top_level_files=ignore_top_level_files)
 
 
 def iterate_through_flat_type_subdirectories(directory: Path) -> List:
@@ -223,17 +229,18 @@ subdirs = {x.name: x for x in rootdir.iterdir() if x.is_dir() and x.name in TOP_
 
 # Iterate through TOP_DIRS subdirectories, parsing all files in them and writing to JSON
 for directory_name in TOP_DIRS:
+    print(f'Directory name [{directory_name}]')
     if directory_name == 'ebps':
         # For ebps, only parse the projectile and races subdirectories
         save_to_json(parse_attrib_dir(subdirs[directory_name],
                                       directory_name,
                                       subdirectories={'projectile', 'races', 'props', 'gameplay'}),
                      f'./json/{directory_name}_stats.json')
-    if directory_name == 'upgrade':
+    elif directory_name == 'upgrade':
         # For upgrade, only parse the omg subdirectory
         save_to_json(parse_attrib_dir(subdirs[directory_name],
                                       directory_name,
-                                      subdirectories={'omg'},
+                                      exclude_subsubdirectories={'squad_names', 'platoons'},
                                       ignore_top_level_files=True),
                      f'./json/{directory_name}_stats.json')
     else:
