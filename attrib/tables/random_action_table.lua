@@ -1,6 +1,0 @@
-GameData = Inherit([[]])
-GameData["random_action_01"] = Reference([[tables\action_table.lua]])
-GameData["random_action_02"] = Reference([[tables\action_table.lua]])
-GameData["random_action_03"] = Reference([[tables\action_table.lua]])
-GameData["random_action_04"] = Reference([[tables\action_table.lua]])
-GameData["random_action_05"] = Reference([[tables\action_table.lua]])

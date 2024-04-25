@@ -1,6 +1,0 @@
-GameData = Inherit([[]])
-GameData["rank_01"] = Reference([[tables\resource_table.lua]])
-GameData["rank_02"] = Reference([[tables\resource_table.lua]])
-GameData["rank_03"] = Reference([[tables\resource_table.lua]])
-GameData["rank_04"] = Reference([[tables\resource_table.lua]])
-GameData["rank_05"] = Reference([[tables\resource_table.lua]])

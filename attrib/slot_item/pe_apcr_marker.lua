@@ -1,9 +1,0 @@
-GameData = Inherit([[]])
-GameData["slot_item_bag"] = Reference([[bags\slot_item_bag.lua]])
-GameData["slot_item_bag"]["can_drop"] = false
-GameData["slot_item_bag"]["drop_item_entity"] = [[ebps\gameplay\props\allied_m18_recoilless_rifle_item.lua]]
-GameData["slot_item_bag"]["speech_code_2"]["code_1"] = [[Bz]]
-GameData["slot_item_bag"]["speech_code_3"]["code_1"] = [[Bzk]]
-GameData["slot_item_bag"]["ui_unit_ratings"]["vs_heavyarmor"] = 3
-GameData["slot_item_bag"]["weapon"]["origin"]["y"] = 1.5
-GameData["slot_item_bag"]["weapon"]["type"] = [[squad]]

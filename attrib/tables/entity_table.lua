@@ -1,9 +1,0 @@
-GameData = Inherit([[]])
-GameData["entity_01"] = [[]]
-GameData["entity_02"] = [[]]
-GameData["entity_03"] = [[]]
-GameData["entity_04"] = [[]]
-GameData["entity_05"] = [[]]
-GameData["entity_06"] = [[]]
-GameData["entity_07"] = [[]]
-GameData["entity_08"] = [[]]

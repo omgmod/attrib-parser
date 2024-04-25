@@ -1,5 +1,0 @@
-GameData = Inherit([[]])
-GameData["slot_item_bag"] = Reference([[bags\slot_item_bag.lua]])
-GameData["slot_item_bag"]["drop_item_entity"] = [[ebps\gameplay\props\generic_instantuse_manpower_k_rations_item.lua]]
-GameData["slot_item_bag"]["drop_rate"] = 1
-GameData["slot_item_bag"]["slot_size"] = 1

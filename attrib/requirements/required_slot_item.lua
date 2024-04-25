@@ -1,9 +1,0 @@
-GameData = Inherit([[]])
-GameData["0x38103F53"] = false
-GameData["check_item_on_entity"] = false
-GameData["display_requirement"] = true 
-GameData["max_owned"] = 10
-GameData["min_owned"] = 0
-GameData["reason"] = [[usage]]
-GameData["slot_item"] = [[]]
-GameData["ui_name"] = "$0"

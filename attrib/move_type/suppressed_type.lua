@@ -1,9 +1,0 @@
-GameData = Inherit([[]])
-GameData["move_type_bag"] = Reference([[bags\move_type_bag.lua]])
-GameData["move_type_bag"]["chance_to_soft_select_cover"] = 0
-GameData["move_type_bag"]["leapfrog_cover_search_radius"] = 6
-GameData["move_type_bag"]["max_elements_leapfrogging_simultaneously"] = 3
-GameData["move_type_bag"]["percent_to_pull_toward_cover_on_soft_selection"] = 0.6999999881
-GameData["move_type_bag"]["secs_to_delay_leapfrog_start_max"] = 3
-GameData["move_type_bag"]["secs_to_delay_leapfrog_start_min"] = 1.5
-GameData["move_type_bag"]["secs_to_hold_at_move_start_max"] = 0.5
